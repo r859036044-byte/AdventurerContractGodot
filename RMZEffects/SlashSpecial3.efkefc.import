@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://cvkkv2x5jn4ek"
+path="res://.godot/imported/SlashSpecial3.efkefc-1f05144d6db51c5fb69f4931c9342bd6.res"
+
+[deps]
+
+source_file="res://RMZEffects/SlashSpecial3.efkefc"
+dest_files=["res://.godot/imported/SlashSpecial3.efkefc-1f05144d6db51c5fb69f4931c9342bd6.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

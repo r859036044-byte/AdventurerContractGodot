@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bq18fnec5q8xv"]
+
+[ext_resource type="Script" uid="uid://cvhitet0gjtwf" path="res://Scripts/Core/RMZBootstrap.cs" id="1_boot"]
+
+[node name="Main" type="Node2D" unique_id=1855672055]
+script = ExtResource("1_boot")

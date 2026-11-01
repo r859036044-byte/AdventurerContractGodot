@@ -1,0 +1,1502 @@
+[
+ {
+  "id": "簡單",
+  "name": "{雜魚雜魚~}",
+  "description": "{遊玩簡單模式解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 95,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "普通",
+  "name": "{普通的雜魚~}",
+  "description": "{遊玩普通模式解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 96,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "困難",
+  "name": "{歡迎你，玩家}",
+  "description": "{遊玩困難模式解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "百萬",
+  "name": "{百萬富翁}",
+  "description": "{賺取一百萬G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 8,
+    "value": 1000000
+   }
+  ]
+ },
+ {
+  "id": "千萬",
+  "name": "{千萬富翁}",
+  "description": "{賺取一千萬G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 8,
+    "value": 10000000
+   }
+  ]
+ },
+ {
+  "id": "億萬",
+  "name": "{身價一個億~（困難）}",
+  "description": "{困難模式賺取一個億G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": true,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 8,
+    "value": 100000000
+   }
+  ]
+ },
+ {
+  "id": "戰力1",
+  "name": "{精英冒險者}",
+  "description": "{戰力達到1000解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 68,
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "id": "戰力2",
+  "name": "{頂尖冒險者}",
+  "description": "{戰力達到2000解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 68,
+    "value": 2000
+   }
+  ]
+ },
+ {
+  "id": "戰力3",
+  "name": "{超越S級冒險者（困難）}",
+  "description": "{困難模式戰力達到10000解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 68,
+    "value": 10000
+   }
+  ]
+ },
+ {
+  "id": "戰力4",
+  "name": "{SSS級冒險者（困難）}",
+  "description": "{困難模式戰力達到30000解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 68,
+    "value": 30000
+   }
+  ]
+ },
+ {
+  "id": "青梅1",
+  "name": "{夕陽下的誓言}~❤",
+  "description": "{與尤梨卡好感達到100並結婚解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 204,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 84,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "人妻1",
+  "name": "{人妻才是我要的純愛}~❤",
+  "description": "{與露娜好感達到100並結婚解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 205,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 82,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "公主1",
+  "name": "{卸下皇冠的新娘}~❤",
+  "description": "{與克萊爾好感達到100並結婚解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 206,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 85,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "狼姐妹1",
+  "name": "{溫暖的家}~❤",
+  "description": "{與雪瑤雪霜好感達到100並結婚解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 83,
+    "value": 100
+   },
+   {
+    "type": "switch_on",
+    "id": 207,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "魔法師1",
+  "name": "？？？",
+  "description": "{自己去玩另一個版本來看吧}~❤",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 208,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 86,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "大奶後宮",
+  "name": "{青梅，人妻與公主}~❤",
+  "description": "{與尤梨卡，露娜和克萊爾同時結婚解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 55,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 85,
+    "value": 100
+   },
+   {
+    "type": "variable_at_least",
+    "id": 82,
+    "value": 100
+   },
+   {
+    "type": "variable_at_least",
+    "id": 84,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "小奶後宮",
+  "name": "{魔法師與兩隻小狼}~❤",
+  "description": "{與鈴音和雪瑤雪霜同時結婚解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 56,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 83,
+    "value": 100
+   },
+   {
+    "type": "variable_at_least",
+    "id": 86,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "青梅2",
+  "name": "{別人形狀的青梅}~❤",
+  "description": "{與尤梨卡墮落達到100並契約解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 209,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 89,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "人妻2",
+  "name": "{虛飾的完美家庭}~❤",
+  "description": "{與露娜墮落達到100並契約解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 210,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 87,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "公主2",
+  "name": "{史萊姆與公主的契約}~❤",
+  "description": "{與克萊爾墮落達到100並契約解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 211,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 90,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "狼姐妹1",
+  "name": "{雙狼的溫順枷鎖}~❤",
+  "description": "{與雪瑤雪霜墮落達到100並契約解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 212,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 88,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "魔法師2",
+  "name": "{鈴音的秘密牽繩}~❤",
+  "description": "{與鈴音墮落達到100並契約解鎖的成就}~❤",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 213,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 91,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "活期1",
+  "name": "{初入活期定存}",
+  "description": "{第一次將錢投入活期定存解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 0,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "股票1",
+  "name": "{初入股票}",
+  "description": "{第一次將錢投入股票解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 0,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "槓桿1",
+  "name": "{初入槓桿}",
+  "description": "{第一次將錢投入槓桿解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 0,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "活期2",
+  "name": "{積少成多}",
+  "description": "{活期定存擁有10萬G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 602,
+    "value": 100000
+   }
+  ]
+ },
+ {
+  "id": "股票2",
+  "name": "{投資小賺}",
+  "description": "{股票擁有10萬G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 603,
+    "value": 100000
+   }
+  ]
+ },
+ {
+  "id": "股票3",
+  "name": "{投資專家}",
+  "description": "{股票擁有100萬G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 603,
+    "value": 1000000
+   }
+  ]
+ },
+ {
+  "id": "股票4",
+  "name": "{小虧一筆}",
+  "description": "{股票下跌1次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 613,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "股票5",
+  "name": "{失誤的投資}",
+  "description": "{股票下跌10次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 613,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "槓桿2",
+  "name": "{賭狗翻身！（困難）}",
+  "description": "{困難模式槓桿擁有1000萬G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 604,
+    "value": 10000000
+   }
+  ]
+ },
+ {
+  "id": "槓桿3",
+  "name": "{賭狗一無所有！}",
+  "description": "{槓桿虧到沒錢解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 614,
+    "value": 1
+   },
+   {
+    "type": "variable_at_least",
+    "id": 604,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "貸款1",
+  "name": "{初入貸款}",
+  "description": "{進行1次貸款解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 606,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "貸款2",
+  "name": "{貸款VIP客戶}",
+  "description": "{進行10次貸款解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 615,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "貸款3",
+  "name": "{貸款失信人}",
+  "description": "{還不起貸款解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 251,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "房租1",
+  "name": "{莫欺少年窮，我是真的窮}",
+  "description": "{交不起房租解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 252,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "冒險1",
+  "name": "{冒險開始！}",
+  "description": "{進行1次冒險解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 641,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "冒險2",
+  "name": "{有經驗的冒險者}",
+  "description": "{進行10次冒險解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 641,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "冒險3",
+  "name": "{老練的冒險者}",
+  "description": "{進行100次冒險解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 641,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "冒險4",
+  "name": "{肝帝冒險者！（困難）}",
+  "description": "{困難模式進行500次冒險解鎖的成就}\n",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 641,
+    "value": 500
+   }
+  ]
+ },
+ {
+  "id": "僱傭1",
+  "name": "{有錢喔}",
+  "description": "{僱傭累積金額5000G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 642,
+    "value": 5000
+   }
+  ]
+ },
+ {
+  "id": "僱傭2",
+  "name": "{你很有錢喔}",
+  "description": "{僱傭累積金額10000G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 642,
+    "value": 10000
+   }
+  ]
+ },
+ {
+  "id": "僱傭3",
+  "name": "{爺有的是錢}",
+  "description": "{僱傭累積金額20000G解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 642,
+    "value": 20000
+   }
+  ]
+ },
+ {
+  "id": "獨自1",
+  "name": "{自己的冒險}",
+  "description": "{獨自冒險1次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 643,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "獨自2",
+  "name": "{獨立冒險者}",
+  "description": "{獨自冒險10次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 643,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "獨自3",
+  "name": "{我獨自冒險}",
+  "description": "{獨自冒險20次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 643,
+    "value": 20
+   }
+  ]
+ },
+ {
+  "id": "獨自尤梨卡",
+  "name": "{青梅在旁}",
+  "description": "{獨自冒險與尤梨卡組隊解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 253,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 100,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "獨自露娜",
+  "name": "{人妻在旁}",
+  "description": "{獨自冒險與露娜組隊解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 253,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 98,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "獨自克萊爾",
+  "name": "{公主在旁}",
+  "description": "{獨自冒險與克萊爾組隊解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 253,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 101,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "獨自雪瑤雪霜",
+  "name": "{狼姐妹在旁}",
+  "description": "{獨自冒險與雪瑤雪霜組隊解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 253,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 99,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "獨自鈴音",
+  "name": "{鈴音在旁}",
+  "description": "{獨自冒險與鈴音組隊解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 253,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 102,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "獨自困難全組隊",
+  "name": "{公會最強陣容（困難）}",
+  "description": "{困難模式獨自冒險與所有女主組隊解鎖的成績}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "switch_on",
+    "id": 253,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 98,
+    "value": 1
+   },
+   {
+    "type": "variable_at_least",
+    "id": 99,
+    "value": 1
+   },
+   {
+    "type": "variable_at_least",
+    "id": 100,
+    "value": 1
+   },
+   {
+    "type": "variable_at_least",
+    "id": 101,
+    "value": 1
+   },
+   {
+    "type": "variable_at_least",
+    "id": 102,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "道具1",
+  "name": "{新客人}",
+  "description": "{購買黑貓商人的道具1次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 644,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "道具2",
+  "name": "{熟客}",
+  "description": "{購買黑貓商人的道具50次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 644,
+    "value": 50
+   }
+  ]
+ },
+ {
+  "id": "道具3",
+  "name": "{VIP客人}",
+  "description": "{購買黑貓商人的道具1000次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 644,
+    "value": 1000
+   }
+  ]
+ },
+ {
+  "id": "約會1",
+  "name": "{我不賣身}",
+  "description": "{向黑貓商人提出約會請求解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 645,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "約會2",
+  "name": "{我對雜魚沒興趣}",
+  "description": "{向露米奈提出約會請求解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 646,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "對話1",
+  "name": "少女の異世界冒險",
+  "description": "{與青茶對話解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 647,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "對話2",
+  "name": "{狼公主與煉晶花}",
+  "description": "{與Heat對話解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 648,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "對話3",
+  "name": "{殺幽默}！！！",
+  "description": "{與彩色幽默對話解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 649,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "對話3",
+  "name": "{一起殺幽默}！！！",
+  "description": "{聽完殺幽默之歌解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 254,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "裝備1",
+  "name": "{滿級武器}",
+  "description": "{擁有一件+10的裝備解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 650,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "裝備2",
+  "name": "{安全感拉滿}",
+  "description": "{全身穿戴+10的裝備解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 651,
+    "value": 50
+   }
+  ]
+ },
+ {
+  "id": "裝備3",
+  "name": "{裝備收集家（困難）}",
+  "description": "{困難模式收集所有裝備解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "switch_on",
+    "id": 255,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "神器1",
+  "name": "{神器的開始}",
+  "description": "{使用20%強化劵強化星空裝備解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 256,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 652,
+    "value": 1
+   }
+  ]
+ },
+ {
+  "id": "神器2",
+  "name": "{神器練成}",
+  "description": "{使用20%強化劵強化星空裝備+10解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 256,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 652,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "強化1",
+  "name": "{菜鳥鍛造師}",
+  "description": "{強化裝備10次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 653,
+    "value": 10
+   }
+  ]
+ },
+ {
+  "id": "強化2",
+  "name": "{精英鍛造師}",
+  "description": "{強化裝備50次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 653,
+    "value": 50
+   }
+  ]
+ },
+ {
+  "id": "強化3",
+  "name": "{達人鍛造師（困難）}",
+  "description": "{困難模式強化裝備100次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 97,
+    "value": 0
+   },
+   {
+    "type": "variable_at_least",
+    "id": 653,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "強化4",
+  "name": "{失敗乃成功之母}",
+  "description": "{強化裝備失敗100次解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 654,
+    "value": 100
+   }
+  ]
+ },
+ {
+  "id": "初始",
+  "name": "{歸零，歸零，歸零}",
+  "description": "{使用回真捲軸重置1次裝備解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 258,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "耐心",
+  "name": "{有耐心之人}",
+  "description": "{觀看完整開頭動畫解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 257,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "禮物1",
+  "name": "{尤梨卡的禮物}",
+  "description": "{送出禮物給尤梨卡解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 61,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "禮物2",
+  "name": "{露娜的禮物}",
+  "description": "{送出禮物給露娜解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 62,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "禮物3",
+  "name": "{克萊爾的禮物}",
+  "description": "{送出禮物給克萊爾解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 63,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "禮物4",
+  "name": "{雪瑤雪霜的禮物}",
+  "description": "{送出禮物給雪瑤雪霜解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 64,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "禮物5",
+  "name": "{鈴音的禮物}",
+  "description": "{送出禮物給鈴音解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 65,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "拒絕1",
+  "name": "{我還有男友}",
+  "description": "{尤梨卡拒絕禮物解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 66,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "拒絕2",
+  "name": "{我還有老公}",
+  "description": "{露娜拒絕禮物解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 67,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "拒絕3",
+  "name": "{不接受雜魚平民}",
+  "description": "{克萊爾拒絕禮物解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 68,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "拒絕4",
+  "name": "{今日不餓}",
+  "description": "{雪瑤雪霜拒絕禮物解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 69,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "拒絕5",
+  "name": "{我需要魔導書嗎？}",
+  "description": "{鈴音拒絕禮物解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 70,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "鈴音對話1",
+  "name": "{煩別人是不對的}",
+  "description": "{與鈴音對話並被電擊解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "variable_at_least",
+    "id": 51,
+    "value": 5
+   }
+  ]
+ },
+ {
+  "id": "鈴音對話2",
+  "name": "{不聽勸的下場……}",
+  "description": "{與鈴音對話並被電死解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 259,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "克萊爾對話",
+  "name": "{至少不是死刑}",
+  "description": "{騷擾克萊爾被護衛暴打解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 260,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "墮落開始",
+  "name": "{內心的欲望}",
+  "description": "{喝下德恩給的藥水解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 260,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "鏡子",
+  "name": "{我愛乾淨}",
+  "description": "{擦拭房間的鏡子解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 384,
+    "value": 0
+   }
+  ]
+ },
+ {
+  "id": "挑戰模式",
+  "name": "{挑戰未知的勇者}",
+  "description": "{初次進入挑戰模式解鎖的成就}",
+  "icon": 0,
+  "hidden": false,
+  "rare": false,
+  "conditions": [
+   {
+    "type": "switch_on",
+    "id": 383,
+    "value": 0
+   }
+  ]
+ }
+]

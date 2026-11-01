@@ -1,0 +1,27 @@
+# Godot 4 cache & imports
+.godot/
+.import/
+export_presets.cfg
+
+# Mono / C# .NET
+.mono/
+data_*/
+mono_crash.*.json
+[Bb]in/
+[Oo]bj/
+.vs/
+
+# Backups & archives (preventing GitHub limits)
+*.zip
+*.tar
+*.rar
+*.7z
+*.bak
+*.bak-*
+_backups/
+_backup*/
+BackupVersion/
+
+# OS files
+.DS_Store
+Thumbs.db

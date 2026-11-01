@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://clxhl3fve1kjd"
+path="res://.godot/imported/Sweep.efkefc-b185177341bbe18f954b8f4e111685e9.res"
+
+[deps]
+
+source_file="res://RMZEffects/Sweep.efkefc"
+dest_files=["res://.godot/imported/Sweep.efkefc-b185177341bbe18f954b8f4e111685e9.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

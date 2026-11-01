@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://bmmb7djjt7cim"
+path="res://.godot/imported/Powerdown1.efkefc-8964b5c1e0bf07018f949fd2b8b1ad2a.res"
+
+[deps]
+
+source_file="res://RMZEffects/Powerdown1.efkefc"
+dest_files=["res://.godot/imported/Powerdown1.efkefc-8964b5c1e0bf07018f949fd2b8b1ad2a.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

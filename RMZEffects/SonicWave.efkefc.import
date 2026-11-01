@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://d12p5b8t0tsjt"
+path="res://.godot/imported/SonicWave.efkefc-3424df2cce531d9cd51e7a52b434cd63.res"
+
+[deps]
+
+source_file="res://RMZEffects/SonicWave.efkefc"
+dest_files=["res://.godot/imported/SonicWave.efkefc-3424df2cce531d9cd51e7a52b434cd63.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

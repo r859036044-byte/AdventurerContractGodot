@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://oxdm3jolstsu"
+path="res://.godot/imported/WaterOne2.efkefc-561f1e9f81134de1a222fabec1e7a246.res"
+
+[deps]
+
+source_file="res://RMZEffects/WaterOne2.efkefc"
+dest_files=["res://.godot/imported/WaterOne2.efkefc-561f1e9f81134de1a222fabec1e7a246.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

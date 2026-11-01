@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://cvhyvq6a4tagq"
+path="res://.godot/imported/HealAll1.efkefc-cd5c10bf8fd5741f692e9d39b37cc471.res"
+
+[deps]
+
+source_file="res://RMZEffects/HealAll1.efkefc"
+dest_files=["res://.godot/imported/HealAll1.efkefc-cd5c10bf8fd5741f692e9d39b37cc471.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

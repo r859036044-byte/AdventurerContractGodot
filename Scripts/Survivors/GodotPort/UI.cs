@@ -1,0 +1,40 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using Godot;
+namespace RMZS.GodotPort.EventSystems {
+public class PointerEventData {public Vector2 position=>InputSystem.Mouse.current.position.ReadValue();}
+public interface IPointerDownHandler {void OnPointerDown(PointerEventData e);}public interface IPointerUpHandler {void OnPointerUp(PointerEventData e);}public interface IPointerExitHandler {void OnPointerExit(PointerEventData e);}public interface IPointerEnterHandler {void OnPointerEnter(PointerEventData e);}public interface IPointerClickHandler {void OnPointerClick(PointerEventData e);}
+public class EventSystem:Component {public static EventSystem current=>FindAnyObjectByType<EventSystem>();public bool IsPointerOverGameObject()=>SVRuntime.Instance.GetViewport().GuiGetHoveredControl()!=null;}
+}
+namespace RMZS.GodotPort.UI {
+public class CanvasScaler:Component {public enum ScaleMode{ScaleWithScreenSize}public enum ScreenMatchMode{Expand,MatchWidthOrHeight}public ScaleMode uiScaleMode;public ScreenMatchMode screenMatchMode;public Vector2 referenceResolution=new(1280,720);public float matchWidthOrHeight;}
+public class GraphicRaycaster:Component {}
+public class Graphic:Component {
+ public Color color=Color.white;public bool raycastTarget=true;internal PortGraphic draw;public RectTransform rectTransform=>(RectTransform)transform;
+ internal virtual void Attach(){var ui=gameObject.EnsureUI();draw=new PortGraphic{Owner=this,MouseFilter=Control.MouseFilterEnum.Ignore};ui.AddChild(draw);draw.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);}
+ internal virtual void Sync(){if(draw==null)return;draw.Visible=enabled;draw.MouseFilter=raycastTarget&&enabled?Control.MouseFilterEnum.Stop:Control.MouseFilterEnum.Ignore;draw.QueueRedraw();}
+}
+public class Image:Graphic {public Godot.StyleBox WindowStyle;public enum Type{Simple,Sliced,Filled}public enum FillMethod{Horizontal,Vertical,Radial360}public Sprite sprite;public Type type;public FillMethod fillMethod;public float fillAmount=1,pixelsPerUnitMultiplier=1;public bool preserveAspect;public int fillOrigin;}
+public class Text:Graphic {public string text="";public Font font;public int fontSize=20;public TextAnchor alignment;public HorizontalWrapMode horizontalOverflow;public VerticalWrapMode verticalOverflow;public FontStyle fontStyle;public bool supportRichText=true,resizeTextForBestFit;public int resizeTextMinSize,resizeTextMaxSize;public float lineSpacing=1;RichTextLabel label;string last;int lastSize;Color lastColor;public float preferredWidth=>label?.GetContentWidth()??0;public float preferredHeight=>label?.GetContentHeight()??0;
+ internal override void Attach(){base.Attach();label=new RichTextLabel{BbcodeEnabled=true,ScrollActive=false,MouseFilter=Control.MouseFilterEnum.Ignore,FitContent=false};draw.AddChild(label);label.SetAnchorsAndOffsetsPreset(Control.LayoutPreset.FullRect);label.AddThemeFontOverride("normal_font",RMZ.RMZFonts.Main);label.AddThemeFontOverride("bold_font",RMZ.RMZFonts.Main);}
+ internal override void Sync(){base.Sync();label.Visible=enabled;label.AutowrapMode=horizontalOverflow==HorizontalWrapMode.Wrap?TextServer.AutowrapMode.WordSmart:TextServer.AutowrapMode.Off;
+ int a=(int)alignment;string align=a%3==1?"center":a%3==2?"right":"left";var content=(text??"").Replace("<b>","[b]").Replace("</b>","[/b]").Replace("<i>","[i]").Replace("</i>","[/i]");content=System.Text.RegularExpressions.Regex.Replace(content,@"<color=([^>]+)>","[color=$1]").Replace("</color>","[/color]");content=System.Text.RegularExpressions.Regex.Replace(content,@"<size=([0-9]+)>","[font_size=$1]").Replace("</size>","[/font_size]");string markup="["+align+"]"+content+"[/"+align+"]";if(last!=markup){label.Text=markup;last=markup;}if(lastSize!=fontSize){label.AddThemeFontSizeOverride("normal_font_size",fontSize);label.AddThemeFontSizeOverride("bold_font_size",fontSize);lastSize=fontSize;}if(lastColor!=color){label.Modulate=color;lastColor=color;}
+ float h=label.GetContentHeight();label.OffsetTop=a/3==1?Math.Max(0,(draw.Size.Y-h)/2):a/3==2?Math.Max(0,draw.Size.Y-h):0;
+ var outline=GetComponent<Outline>();if(outline!=null){label.AddThemeColorOverride("font_outline_color",outline.effectColor);label.AddThemeConstantOverride("outline_size",2);}
+ }
+}
+public class UnityEvent {readonly List<Action> actions=new();public void AddListener(Action a)=>actions.Add(a);public void RemoveAllListeners()=>actions.Clear();public void Invoke(){foreach(var a in actions.ToArray())a();}}
+public struct ColorBlock {public Color normalColor,highlightedColor,pressedColor,selectedColor,disabledColor;public float colorMultiplier,fadeDuration;}
+public class Selectable:Component {public enum Transition {None,ColorTint} public Transition transition;}
+public class Button:Selectable {public Graphic targetGraphic;public ColorBlock colors=new(){normalColor=Color.white,highlightedColor=Color.white,pressedColor=Color.white};public UnityEvent onClick=new();public bool interactable=true;}
+public class Outline:Component {public Color effectColor;public Vector2 effectDistance;public bool useGraphicAlpha;}
+public partial class PortGraphic:Control {
+ internal new Graphic Owner;bool pressed,hover;
+ public override void _Ready(){MouseEntered+=()=>{hover=true;Dispatch("OnPointerEnter");};MouseExited+=()=>{hover=false;pressed=false;Dispatch("OnPointerExit");};}
+ void Dispatch(string n){if(Owner==null)return;var e=new EventSystems.PointerEventData();foreach(var c in Owner.gameObject.components.ToArray()){if(!c.isActiveAndEnabled)continue;switch(n){case "OnPointerEnter":(c as EventSystems.IPointerEnterHandler)?.OnPointerEnter(e);break;case "OnPointerExit":(c as EventSystems.IPointerExitHandler)?.OnPointerExit(e);break;case "OnPointerDown":(c as EventSystems.IPointerDownHandler)?.OnPointerDown(e);break;case "OnPointerUp":(c as EventSystems.IPointerUpHandler)?.OnPointerUp(e);break;case "OnPointerClick":(c as EventSystems.IPointerClickHandler)?.OnPointerClick(e);break;}}}
+ public override void _GuiInput(InputEvent e){if(e is InputEventMouseButton m&&m.ButtonIndex==MouseButton.Left){if(m.Pressed){pressed=true;Dispatch("OnPointerDown");}else {Dispatch("OnPointerUp");if(pressed){var b=Owner.gameObject.GetComponent<Button>();if(b?.interactable==true)b.onClick.Invoke();Dispatch("OnPointerClick");}pressed=false;}}}
+ public override void _Draw(){if(Owner is not Image img||!img.enabled)return;if(img.WindowStyle!=null){DrawStyleBox(img.WindowStyle,new Rect2(Godot.Vector2.Zero,Size));return;}var tint=img.color;var b=img.GetComponent<Button>();if(b!=null&&hover){var c=pressed?b.colors.pressedColor:b.colors.highlightedColor;if(c.a>0)tint=new(tint.r*c.r,tint.g*c.g,tint.b*c.b,tint.a*c.a);}Rect2 r=new(Godot.Vector2.Zero,Size);if(img.type==Image.Type.Filled){if(img.fillMethod==Image.FillMethod.Vertical)r=new(new Godot.Vector2(0,Size.Y*(1-img.fillAmount)),new Godot.Vector2(Size.X,Size.Y*img.fillAmount));else r.Size=new(Size.X*img.fillAmount,Size.Y);}if(img.sprite==null){DrawRect(r,tint);return;}if(img.preserveAspect){var s=img.sprite.rect;float k=Math.Min(r.Size.X/s.width,r.Size.Y/s.height);var wh=new Godot.Vector2(s.width*k,s.height*k);r=new(r.Position+(r.Size-wh)/2,wh);}if(img.type==Image.Type.Sliced && img.sprite.border.x>0){var bdr=img.sprite.border;float l=Math.Min(bdr.x,r.Size.X/2),rr=Math.Min(bdr.z,r.Size.X/2),top=Math.Min(bdr.w,r.Size.Y/2),bottom=Math.Min(bdr.y,r.Size.Y/2);float[] xs={0,l,r.Size.X-rr,r.Size.X},ys={0,top,r.Size.Y-bottom,r.Size.Y};float[] sx={0,bdr.x,img.sprite.rect.width-bdr.z,img.sprite.rect.width},sy={0,bdr.w,img.sprite.rect.height-bdr.y,img.sprite.rect.height};for(int y=0;y<3;y++)for(int x=0;x<3;x++){var target=new Rect2(r.Position+new Godot.Vector2(xs[x],ys[y]),new Godot.Vector2(xs[x+1]-xs[x],ys[y+1]-ys[y]));var source=new Rect2(sx[x],sy[y],sx[x+1]-sx[x],sy[y+1]-sy[y]);DrawTextureRectRegion(img.sprite.Native,target,source,tint);}return;}DrawTextureRect(img.sprite.Native,r,false,tint);}
+}
+}
+namespace RMZS.GodotPort {public class CanvasGroup:Component {public float alpha=1;public bool interactable=true,blocksRaycasts=true;}}

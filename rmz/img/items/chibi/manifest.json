@@ -1,0 +1,422 @@
+[
+  {
+    "itemId": 117,
+    "name": "{高級手帕}",
+    "cell": 0,
+    "column": 0,
+    "row": 0
+  },
+  {
+    "itemId": 118,
+    "name": "{高級醫療包}",
+    "cell": 1,
+    "column": 1,
+    "row": 0
+  },
+  {
+    "itemId": 119,
+    "name": "{魔力偵測器}",
+    "cell": 2,
+    "column": 2,
+    "row": 0
+  },
+  {
+    "itemId": 120,
+    "name": "{應急補給包}",
+    "cell": 3,
+    "column": 3,
+    "row": 0
+  },
+  {
+    "itemId": 121,
+    "name": "{公會手冊}",
+    "cell": 4,
+    "column": 4,
+    "row": 0
+  },
+  {
+    "itemId": 122,
+    "name": "{地圖}",
+    "cell": 5,
+    "column": 5,
+    "row": 0
+  },
+  {
+    "itemId": 123,
+    "name": "{木天蓼香包}",
+    "cell": 6,
+    "column": 6,
+    "row": 0
+  },
+  {
+    "itemId": 124,
+    "name": "{精神薄荷香袋}",
+    "cell": 7,
+    "column": 7,
+    "row": 0
+  },
+  {
+    "itemId": 125,
+    "name": "{奶油蛋糕}",
+    "cell": 8,
+    "column": 0,
+    "row": 1
+  },
+  {
+    "itemId": 127,
+    "name": "{微醺果酒}",
+    "cell": 9,
+    "column": 1,
+    "row": 1
+  },
+  {
+    "itemId": 128,
+    "name": "{濃醇紅酒}",
+    "cell": 10,
+    "column": 2,
+    "row": 1
+  },
+  {
+    "itemId": 129,
+    "name": "{薄荷白酒}",
+    "cell": 11,
+    "column": 3,
+    "row": 1
+  },
+  {
+    "itemId": 130,
+    "name": "{深水炸彈}",
+    "cell": 12,
+    "column": 4,
+    "row": 1
+  },
+  {
+    "itemId": 132,
+    "name": "{依戀蜜香}",
+    "cell": 13,
+    "column": 5,
+    "row": 1
+  },
+  {
+    "itemId": 133,
+    "name": "{魔力精油}",
+    "cell": 14,
+    "column": 6,
+    "row": 1
+  },
+  {
+    "itemId": 134,
+    "name": "{項圈}",
+    "cell": 15,
+    "column": 7,
+    "row": 1
+  },
+  {
+    "itemId": 135,
+    "name": "{狗狗情趣套裝}",
+    "cell": 16,
+    "column": 0,
+    "row": 2
+  },
+  {
+    "itemId": 136,
+    "name": "{眼罩}",
+    "cell": 17,
+    "column": 1,
+    "row": 2
+  },
+  {
+    "itemId": 137,
+    "name": "{肥皂}",
+    "cell": 18,
+    "column": 2,
+    "row": 2
+  },
+  {
+    "itemId": 138,
+    "name": "{史萊姆粘液}",
+    "cell": 19,
+    "column": 3,
+    "row": 2
+  },
+  {
+    "itemId": 139,
+    "name": "{狗碗}",
+    "cell": 20,
+    "column": 4,
+    "row": 2
+  },
+  {
+    "itemId": 140,
+    "name": "{精美狗糧}",
+    "cell": 21,
+    "column": 5,
+    "row": 2
+  },
+  {
+    "itemId": 142,
+    "name": "{紫羅花}",
+    "cell": 22,
+    "column": 6,
+    "row": 2
+  },
+  {
+    "itemId": 143,
+    "name": "{護膚品}",
+    "cell": 23,
+    "column": 7,
+    "row": 2
+  },
+  {
+    "itemId": 144,
+    "name": "{魔物戰利品}",
+    "cell": 24,
+    "column": 0,
+    "row": 3
+  },
+  {
+    "itemId": 145,
+    "name": "{魔導書籍}",
+    "cell": 25,
+    "column": 1,
+    "row": 3
+  },
+  {
+    "itemId": 146,
+    "name": "{美味大餐}",
+    "cell": 26,
+    "column": 2,
+    "row": 3
+  },
+  {
+    "itemId": 147,
+    "name": "{愉悅的跳跳蛋}",
+    "cell": 27,
+    "column": 3,
+    "row": 3
+  },
+  {
+    "itemId": 148,
+    "name": "{按摩棒}",
+    "cell": 28,
+    "column": 4,
+    "row": 3
+  },
+  {
+    "itemId": 149,
+    "name": "{史萊姆球棒}",
+    "cell": 29,
+    "column": 5,
+    "row": 3
+  },
+  {
+    "itemId": 150,
+    "name": "{動物套裝}",
+    "cell": 30,
+    "column": 6,
+    "row": 3
+  },
+  {
+    "itemId": 151,
+    "name": "{一比一狗狗玩具}",
+    "cell": 31,
+    "column": 7,
+    "row": 3
+  },
+  {
+    "itemId": 153,
+    "name": "{婚紗}",
+    "cell": 32,
+    "column": 0,
+    "row": 4
+  },
+  {
+    "itemId": 154,
+    "name": "{奴隸項圈}",
+    "cell": 33,
+    "column": 1,
+    "row": 4
+  },
+  {
+    "itemId": 155,
+    "name": "{約會提示}",
+    "cell": 34,
+    "column": 2,
+    "row": 4
+  },
+  {
+    "itemId": 156,
+    "name": "{真實之影的刻印球}",
+    "cell": 35,
+    "column": 3,
+    "row": 4
+  },
+  {
+    "itemId": 157,
+    "name": "{虛飾迷霧的契卷}",
+    "cell": 36,
+    "column": 4,
+    "row": 4
+  },
+  {
+    "itemId": 158,
+    "name": "-----特定禮物-----",
+    "cell": 37,
+    "column": 5,
+    "row": 4
+  },
+  {
+    "itemId": 159,
+    "name": "{百開紫星}",
+    "cell": 38,
+    "column": 6,
+    "row": 4
+  },
+  {
+    "itemId": 160,
+    "name": "{瑪露戀護膚品}",
+    "cell": 39,
+    "column": 7,
+    "row": 4
+  },
+  {
+    "itemId": 161,
+    "name": "{魔角殘骸}",
+    "cell": 40,
+    "column": 0,
+    "row": 5
+  },
+  {
+    "itemId": 162,
+    "name": "{大賢者之書}",
+    "cell": 41,
+    "column": 1,
+    "row": 5
+  },
+  {
+    "itemId": 163,
+    "name": "{超高級餐廳招待劵}",
+    "cell": 42,
+    "column": 2,
+    "row": 5
+  },
+  {
+    "itemId": 164,
+    "name": "{遙控蛋蛋全套}",
+    "cell": 27,
+    "column": 3,
+    "row": 3
+  },
+  {
+    "itemId": 165,
+    "name": "{自動智能按摩棒}",
+    "cell": 28,
+    "column": 4,
+    "row": 3
+  },
+  {
+    "itemId": 166,
+    "name": "{史萊姆人形狀物}",
+    "cell": 42,
+    "column": 2,
+    "row": 5
+  },
+  {
+    "itemId": 167,
+    "name": "{興奮搖尾劑}",
+    "cell": 43,
+    "column": 3,
+    "row": 5
+  },
+  {
+    "itemId": 168,
+    "name": "{一比一狼人玩具}",
+    "cell": 44,
+    "column": 4,
+    "row": 5
+  },
+  {
+    "itemId": 170,
+    "name": "{隨機寶箱（道具）}",
+    "cell": 45,
+    "column": 5,
+    "row": 5
+  },
+  {
+    "itemId": 171,
+    "name": "{隨機寶箱（好感墮落道具）}",
+    "cell": 46,
+    "column": 6,
+    "row": 5
+  },
+  {
+    "itemId": 172,
+    "name": "{隨機寶箱（特定道具）}",
+    "cell": 47,
+    "column": 7,
+    "row": 5
+  },
+  {
+    "itemId": 173,
+    "name": "{隨機寶箱（捲軸）}",
+    "cell": 45,
+    "column": 5,
+    "row": 5
+  },
+  {
+    "itemId": 174,
+    "name": "{隨機寶箱（武器捲軸）}",
+    "cell": 45,
+    "column": 5,
+    "row": 5
+  },
+  {
+    "itemId": 175,
+    "name": "{隨機寶箱（防具捲軸）}",
+    "cell": 45,
+    "column": 5,
+    "row": 5
+  },
+  {
+    "itemId": 176,
+    "name": "{隨機寶箱（裝備）}",
+    "cell": 45,
+    "column": 5,
+    "row": 5
+  },
+  {
+    "itemId": 177,
+    "name": "{隨機寶箱（粗製-精良）}",
+    "cell": 45,
+    "column": 5,
+    "row": 5
+  },
+  {
+    "itemId": 178,
+    "name": "{隨機寶箱（精良-稀有）}",
+    "cell": 46,
+    "column": 6,
+    "row": 5
+  },
+  {
+    "itemId": 179,
+    "name": "{隨機寶箱（稀有-史詩）}",
+    "cell": 47,
+    "column": 7,
+    "row": 5
+  },
+  {
+    "itemId": 201,
+    "name": "{技能書：契約之絆}",
+    "cell": 25,
+    "column": 1,
+    "row": 3
+  },
+  {
+    "itemId": 202,
+    "name": "{技能書：砸瓦魯多}",
+    "cell": 40,
+    "column": 0,
+    "row": 5
+  }
+]

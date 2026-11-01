@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://dxbmbf5r4yh01"
+path="res://.godot/imported/HitPhysical.efkefc-0d1260913e19ce1321c080d2585af67b.res"
+
+[deps]
+
+source_file="res://RMZEffects/HitPhysical.efkefc"
+dest_files=["res://.godot/imported/HitPhysical.efkefc-0d1260913e19ce1321c080d2585af67b.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

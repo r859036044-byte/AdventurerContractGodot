@@ -1,0 +1,80 @@
+本次更新：2026-09-13
+
+1. 50+ Monsters Pack 2D v1.0
+作者：isaiah658；第26及47號設計原作者 j0j0n4th4n
+來源網頁：https://opengameart.org/content/50-monsters-pack-2d
+下載：https://opengameart.org/sites/default/files/50_monsters_pack_2d_version_1.0_0.zip
+授權：CC0 1.0 Universal，https://creativecommons.org/publicdomain/zero/1.0/
+用途：倖存者怪物正背面圖像。原包 Credits.txt 保留於 PortAssets/External/Monsters。
+
+2. Icons for fantasy game (units and skills)
+作者：voltz3666
+來源網頁：https://opengameart.org/content/icons-for-fantasy-game-units-and-skills
+下載：https://opengameart.org/sites/default/files/64x64_fantasy_icons.zip
+授權：CC0 1.0 Universal，https://creativecommons.org/publicdomain/zero/1.0/
+用途：技能／強化／大覺的圖示；依格子裁切並放入既有圖示框。
+
+3. Pixel Art Spells
+作者：DevWizard
+來源網頁：https://opengameart.org/content/pixel-art-spells
+下載：https://opengameart.org/sites/default/files/pixelart_spells_1.zip
+授權：CC0 1.0 Universal，https://creativecommons.org/publicdomain/zero/1.0/
+用途：法術投射物和施法命中特效；遊戲內裁切動畫、縮放及染色。
+
+既有素材：rmz、Fonts 與 PortAssets/Survivors、PortAssets/Audio 沿用使用者提供的 RM／Unity 專案。本次沒有找到它們原始來源網頁及版權檔，故不替既有素材宣稱 CC0 授權。
+
+本次實際套用：
+- 怪物 24 個難度條目的檔案對照在 Scripts/Survivors/SVVisualAssets.cs 的 monsters 字典；粉史萊姆、拉米亞女王、高階惡魔、亡靈騎士使用替代色版本。原始圖片未覆寫。
+- 圖示使用 64x64_FantasySkillsIcons_NoBackground.png，按技能意義選格；大覺使用第三階配色，於執行時裁切縮放。
+- 法術使用 Arcane Bolt、Magic Orb、Wind Bolt、Fireball、Firebomb、Magic Sparks、Light Bolt、Darkness Orb、Pixelart Shield、Plant Missle、Ice Lance 的逐格素材；以 Godot 動畫與程式光效組合呈現。
+- 上述新增外部素材均由來源頁標示為 CC0，可複製、修改及商業使用，不要求署名；仍保留來源供後續追溯。沒有改變既有素材的授權。
+
+2026-09-13 視覺修正補充
+- 倖存者 C／B／A／S 四張戰場背景為本次使用 OpenAI image generation 生成，非外部素材網站下載。來源服務：https://openai.com/policies/terms-of-use/ （輸出使用依服務條款；不另宣稱 CC0 或保證獨占版權）。
+- 檔案：PortAssets/Survivors/Background/Redesign/C.png、B.png、A.png、S.png。僅用於倖存者戰場，未更換主線與戰後背景。
+- 角色立繪、表情、小人及 IconSet 的愛心均沿用使用者提供的 RM／Unity 素材，沒有變更其既有授權。
+- 劍雨、落雷與毒霧增強圖形由程式繪製；無新增下載素材。
+
+2026-09-21 法杖與戰鬥武器補充
+- 五款法杖圖示由 OpenAI 內建 image_gen 生成，參照使用者現有 wood／sand／iron／metal／star 2.png 劍圖示的材質與配色，沒有下載其他網站素材。來源服務：https://openai.com/policies/terms-of-use/ （輸出使用依服務條款；不另宣稱 CC0 或獨占版權，原始參考素材沿用使用者既有授權）。
+- 檔案：rmz/img/pictures/UI button/equipment ui/icons/{wood,sand,iron,metal,star} staff.png。用途：法杖背包、裝備、鐵匠鋪圖示及男主戰鬥手持外觀。IconSet.png 追加索引 480–484，Items 181–200 與 Weapons 27–46 對應更新。
+- 揮劍殘光、杖頭閃光及腳下魔法陣由程式繪製；魔法彈沿用上方記錄的 DevWizard Pixel Art Spells（CC0）。沒有新增其他第三方素材。
+
+2026-09-27 Effekseer for Godot 4（RM 動畫特效播放）
+- 外掛：Effekseer for Godot 4 1.80.7，https://github.com/effekseer/EffekseerForGodot4/releases/tag/1.80.7 ，授權 MIT（全文見 addons/effekseer/LICENSE）。只放了 Windows 與 Linux 的執行檔。
+- 用途：事件指令 212「顯示動畫」播放 RM 原本的 Effekseer 特效（Scripts/Core/RMZAnimationPlayer.cs）。
+- 特效檔 RMZEffects/：從使用者自己的 RM 專案 effects/ 複製（RPG Maker MZ 內建素材，依 RPG Maker MZ 授權使用，與原遊戲相同）。
+- 2026-09-29 RMZAnimFrames/：把上面 RM 內建特效用 RM 自帶的 Effekseer for WebGL（js/libs/effekseer.min.js，MIT）預先算成序列圖，遊戲裡直接播放圖片。素材本身仍是 RPG Maker MZ 內建素材。
+
+2026-10-02 道具 Q 版像素圖示重製
+使用方式：OpenAI 內建 image_gen 生成，非外部下載素材。
+來源：本次對話的 AI 原創圖示集；無第三方素材來源頁面、未使用第三方角色或品牌。
+用途：60 個消耗品、禮物、特殊道具及寶箱條目，48 款圖示；不修改武器、防具、強化捲軸。
+授權說明：AI 生成輸出依使用者適用的 OpenAI 服務條款使用；未引入額外第三方素材授權，不宣稱排他著作權。
+素材目錄：rmz/img/items/chibi；原圖 atlas.png、切圖 icon_00.png 至 icon_47.png、對照 manifest.json。
+IconSet 新增索引 496–543，原圖示保留。
+生成提示：Create one 8-column 6-row transparent fantasy RPG inventory sprite atlas, 48 centered objects. Cute chibi pixel art, chunky hard pixels, dark brown outlines, soft pastel jewel colors, no text, no grid, no characters or anatomy.
+逐格物件：handkerchief, medical satchel, magic detector, supplies backpack, guild handbook, map, catnip sachet, mint sachet; cream cake, fruit wine, red wine, mint wine, blue cocktail, amber perfume, essential oil, pet collar; dog-ear accessories, sleep mask, soap, slime jar, pet bowl, kibble, violet bouquet, skincare; fang trophy, grimoire, roast dinner, egg gadget, round-head massager, slime bat, animal ears, dog plush; wedding dress, black collar, heart bell, crystal orb, contract parchment, star flower, luxury cream, horn trophy; sage book, restaurant ticket, slime doll, paw potion, wolf plush, wooden chest, gift chest, rare chest.
+
+2026-10-18 奴隸區城市日夜地圖
+來源：使用者自行生成並提供的城鎮參考圖，內建 OpenAI image_gen 編輯生成；無外部下載網頁。
+檔案：rmz/img/parallaxes/DistrictTown_Day.png、DistrictTown_Night.png。
+用途：Map039 圖片地圖。住宅內部沿用既有 Fantasy_Inside 素材。
+授權聲明：新增圖片為使用者提供參考的 AI 編輯輸出，依適用 OpenAI 服務條款使用，未新增第三方下載素材；原參考圖權利仍依使用者原有授權。
+生成提示摘要：保留使用者城鎮建築與道路位置，修繕木板屋頂、整理牧場；白天自然光。中央平台恢復三座空木製固定架，無人物。夜景僅修改光照為藍色月光、窗燈與火把，保留同配置。
+
+
+【2026-10-19 奴隸區日系內裝重製】
+檔案：rmz/img/parallaxes/DistrictInterior_JP_{Guild,Home,Ranch,Workshop}.png 與 _Source.png。
+來源：OpenAI 內建 image_gen 本專案生成，未採用新下載的第三方網頁素材；生成提示詞見 奴隸區內裝生成提示詞.json。
+畫風參考：本專案既有 rmz/img/tilesets/Fantasy_Inside_B.png；原有素材授權仍依專案既有紀錄，不新增其轉售或再散布授權。
+生成內容使用依 OpenAI 使用條款 https://openai.com/policies/terms-of-use/；不代表素材具排他權利，未加入任何限非商用外部素材。
+原圖：公會1499×1049，其餘1536×1024。遊戲版為最近鄰2倍像素放大：公會2998×2098，其餘3072×2048，並非新增細節的原生3K圖。
+舊版內裝不再由 Map040–043 使用。
+
+
+【2026-10-19 公會／奴隸區 NPC 日系像素造型】
+新增：rmz/img/characters/$GuildNPC_Smith.png、$GuildNPC_Clerk.png、$GuildNPC_Guard.png、$GuildNPC_Ranger.png。原始1536×1024圖保存在 characters/generated_sources/GuildNPC_A.png、GuildNPC_B.png。
+來源：OpenAI 內建image_gen按本專案提示詞生成，未下載新第三方素材；參考使用者專案既有「醫生.png」的頭身與像素風格。既有素材授權沿用原專案。
+用途：取代公會與奴隸區部分內建RM人形，新增4位短對話NPC。原始圖整理為48×48行走格，四方向各3幀；透明PNG、腳底對齊。
+生成內容依OpenAI使用條款 https://openai.com/policies/terms-of-use/ 使用；未加入限非商用外部素材，不聲稱排他性版權。完整提示詞、替換範圍見 公會NPC美術更新紀錄.json。

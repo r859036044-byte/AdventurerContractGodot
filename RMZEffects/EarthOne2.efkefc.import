@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://cqj8iudicsca6"
+path="res://.godot/imported/EarthOne2.efkefc-4105739b747371890b509ea515ffa8ba.res"
+
+[deps]
+
+source_file="res://RMZEffects/EarthOne2.efkefc"
+dest_files=["res://.godot/imported/EarthOne2.efkefc-4105739b747371890b509ea515ffa8ba.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

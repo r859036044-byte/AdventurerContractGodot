@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://by8aj26vbrden"
+path="res://.godot/imported/IceAll1.efkefc-f267d693148e1b7e20e4b259064bcd42.res"
+
+[deps]
+
+source_file="res://RMZEffects/IceAll1.efkefc"
+dest_files=["res://.godot/imported/IceAll1.efkefc-f267d693148e1b7e20e4b259064bcd42.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

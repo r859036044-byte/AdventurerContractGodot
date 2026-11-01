@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://d0m8wrh42nh7f"
+path="res://.godot/imported/ClawPhysical.efkefc-0bb0621c8a5945b2557804452914f8cf.res"
+
+[deps]
+
+source_file="res://RMZEffects/ClawPhysical.efkefc"
+dest_files=["res://.godot/imported/ClawPhysical.efkefc-0bb0621c8a5945b2557804452914f8cf.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

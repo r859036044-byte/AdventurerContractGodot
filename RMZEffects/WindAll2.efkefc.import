@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://dxsbk0qaxxkus"
+path="res://.godot/imported/WindAll2.efkefc-7c3c3295f4058ac557d10c545dbdc932.res"
+
+[deps]
+
+source_file="res://RMZEffects/WindAll2.efkefc"
+dest_files=["res://.godot/imported/WindAll2.efkefc-7c3c3295f4058ac557d10c545dbdc932.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

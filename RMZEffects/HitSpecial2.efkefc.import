@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://pkatc0rj07p8"
+path="res://.godot/imported/HitSpecial2.efkefc-f72e8cff0dc0a1aa843b888a022a0760.res"
+
+[deps]
+
+source_file="res://RMZEffects/HitSpecial2.efkefc"
+dest_files=["res://.godot/imported/HitSpecial2.efkefc-f72e8cff0dc0a1aa843b888a022a0760.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

@@ -1,0 +1,14 @@
+2026-09-21
+製作工具：內建 image_gen（非 CLI）。
+參考素材：使用者專案的 wood／sand／iron／metal／star 2.png。
+最終檔案：
+C:/Users/User/Desktop/Godot/AdventurerContractGodot/rmz/img/pictures/UI button/equipment ui/icons/wood staff.png
+C:/Users/User/Desktop/Godot/AdventurerContractGodot/rmz/img/pictures/UI button/equipment ui/icons/sand staff.png
+C:/Users/User/Desktop/Godot/AdventurerContractGodot/rmz/img/pictures/UI button/equipment ui/icons/iron staff.png
+C:/Users/User/Desktop/Godot/AdventurerContractGodot/rmz/img/pictures/UI button/equipment ui/icons/metal staff.png
+C:/Users/User/Desktop/Godot/AdventurerContractGodot/rmz/img/pictures/UI button/equipment ui/icons/star staff.png
+
+完整生成提示：
+Use case: style-transfer. Game asset: ONE transparent sprite atlas containing five magical STAVES based on the FIVE reference sword icons, preserving each material palette and illustrated RPG inventory icon style. Create a wide horizontal canvas, divided into exactly FIVE EQUAL square cells in a single row, each staff centered entirely in its own cell with 12% transparent padding, no overlap. Order LEFT TO RIGHT: 1 birch wood staff with warm honey wood grain and little green leaf ornament, 2 sandstone staff with carved pale sandy stone head and tan leather grip, 3 forged iron staff with dark angular iron head and brown leather grip, 4 steel staff with blue silver head and cyan diamond crystal, 5 star staff with royal blue and gold head and bright golden star crystal. Each is a LONG SHAFT MAGIC STAFF, not a sword or a wand: slim rod with clearly larger ornament/crystal at top; no sword blade or crossguard. All shafts have exactly same orientation, staff head toward upper left, shaft butt lower right (45 degree diagonal), shaft grip center at approximately 65% along from head toward butt. Cohesive compact painted pixel-art-like 2D JRPG icon silhouettes, dark brown outline and warm shading matching references, readable at 32x32. No background, genuine alpha transparency, NO baked checkerboard, no labels, no lettering, no frames, no character, no ground shadow. All five isolated assets occupy identical relative square bounds so game can split atlas into five equal cells. Reference images are style/material references and are to be transformed from swords into staffs; do not reproduce swords. Save generated output as local image for game integration.
+
+後處理：等比例裁切至 128×128 透明格、匯入 IconSet 索引 480–484。原始劍圖保留。來源與授權紀錄見「素材來源與版權.txt」。

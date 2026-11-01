@@ -1,0 +1,9 @@
+2026-10-02 道具 Q 版像素圖示重製
+使用方式：OpenAI 內建 image_gen 生成，非外部下載素材。
+來源：本次對話的 AI 原創圖示集；無第三方素材來源頁面、未使用第三方角色或品牌。
+用途：60 個消耗品、禮物、特殊道具及寶箱條目，48 款圖示；不修改武器、防具、強化捲軸。
+授權說明：AI 生成輸出依使用者適用的 OpenAI 服務條款使用；未引入額外第三方素材授權，不宣稱排他著作權。
+素材目錄：rmz/img/items/chibi；原圖 atlas.png、切圖 icon_00.png 至 icon_47.png、對照 manifest.json。
+IconSet 新增索引 496–543，原圖示保留。
+生成提示：Create one 8-column 6-row transparent fantasy RPG inventory sprite atlas, 48 centered objects. Cute chibi pixel art, chunky hard pixels, dark brown outlines, soft pastel jewel colors, no text, no grid, no characters or anatomy.
+逐格物件：handkerchief, medical satchel, magic detector, supplies backpack, guild handbook, map, catnip sachet, mint sachet; cream cake, fruit wine, red wine, mint wine, blue cocktail, amber perfume, essential oil, pet collar; dog-ear accessories, sleep mask, soap, slime jar, pet bowl, kibble, violet bouquet, skincare; fang trophy, grimoire, roast dinner, egg gadget, round-head massager, slime bat, animal ears, dog plush; wedding dress, black collar, heart bell, crystal orb, contract parchment, star flower, luxury cream, horn trophy; sage book, restaurant ticket, slime doll, paw potion, wolf plush, wooden chest, gift chest, rare chest.

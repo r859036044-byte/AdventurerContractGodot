@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://34hxdb51oq3e"
+path="res://.godot/imported/FireAll1.efkefc-92ddd8b0bea066b4e3775a3a9fb84521.res"
+
+[deps]
+
+source_file="res://RMZEffects/FireAll1.efkefc"
+dest_files=["res://.godot/imported/FireAll1.efkefc-92ddd8b0bea066b4e3775a3a9fb84521.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

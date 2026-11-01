@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://wo5f52rodix1"
+path="res://.godot/imported/HealOne2.efkefc-671803af284fd40b6827145eecf7c25a.res"
+
+[deps]
+
+source_file="res://RMZEffects/HealOne2.efkefc"
+dest_files=["res://.godot/imported/HealOne2.efkefc-671803af284fd40b6827145eecf7c25a.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

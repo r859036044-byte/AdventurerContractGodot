@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://cpbpfiwjip47q"
+path="res://.godot/imported/ThunderAll3.efkefc-0c671b376cf9b6358f24118060bd57c8.res"
+
+[deps]
+
+source_file="res://RMZEffects/ThunderAll3.efkefc"
+dest_files=["res://.godot/imported/ThunderAll3.efkefc-0c671b376cf9b6358f24118060bd57c8.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

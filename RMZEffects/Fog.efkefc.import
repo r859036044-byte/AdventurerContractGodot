@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://dqxircka5s6q"
+path="res://.godot/imported/Fog.efkefc-010113651b957a685242656fd6045616.res"
+
+[deps]
+
+source_file="res://RMZEffects/Fog.efkefc"
+dest_files=["res://.godot/imported/Fog.efkefc-010113651b957a685242656fd6045616.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

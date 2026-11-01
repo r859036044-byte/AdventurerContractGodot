@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://bx8x205i8wv7d"
+path="res://.godot/imported/Silence.efkefc-5c23acb6a7617f40032b9eda935400e6.res"
+
+[deps]
+
+source_file="res://RMZEffects/Silence.efkefc"
+dest_files=["res://.godot/imported/Silence.efkefc-5c23acb6a7617f40032b9eda935400e6.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

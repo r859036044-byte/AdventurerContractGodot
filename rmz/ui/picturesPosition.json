@@ -1,0 +1,2286 @@
+{
+  "maps": {
+    "map_2": {
+      "98_UI button/bag ui/equipment bag background": {
+        "x": 524,
+        "y": 17,
+        "animation": "right",
+        "frames": 30,
+        "outAnimation": "moveRight",
+        "outFrames": 30
+      },
+      "97_UI button/bag ui/weapon defend equip background": {
+        "x": 53,
+        "y": 8,
+        "animation": "left",
+        "frames": 30,
+        "outAnimation": "moveLeft",
+        "outFrames": 30
+      },
+      "101_UI button/bag ui/scroll or equipment": {
+        "attachedTo": "98",
+        "offsetX": 28,
+        "offsetY": 47
+      },
+      "102_UI button/bag ui/scroll or equipment": {
+        "attachedTo": "98",
+        "offsetX": 212,
+        "offsetY": 47
+      },
+      "100_UI button/bag ui/right cursor": {
+        "attachedTo": "98",
+        "offsetX": 244,
+        "offsetY": 81,
+        "x": 768,
+        "y": 98
+      },
+      "99_UI button/bag ui/left cursor": {
+        "attachedTo": "98",
+        "offsetX": 22,
+        "offsetY": 79,
+        "x": 546,
+        "y": 98
+      },
+      "129_UI button/bag ui/player battle power": {
+        "attachedTo": "97",
+        "offsetX": 194,
+        "offsetY": 160
+      },
+      "130_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 184
+      },
+      "131_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 280
+      },
+      "132_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 376
+      },
+      "133_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 472
+      },
+      "134_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 568
+      },
+      "103_UI button/bag ui/player equip": {
+        "attachedTo": "97",
+        "offsetX": 187,
+        "offsetY": 208
+      },
+      "104_UI button/Exit button": {
+        "attachedTo": "98",
+        "offsetX": 652,
+        "offsetY": -9
+      },
+      "140_UI button/bag ui/weapon defend equip background": {
+        "x": 54,
+        "y": 25,
+        "animation": "left",
+        "frames": 30,
+        "outAnimation": "moveLeft",
+        "outFrames": 30
+      },
+      "141_UI button/bag ui/equipment bag background": {
+        "x": 534.3499999999999,
+        "y": 15,
+        "animation": "right",
+        "frames": 30,
+        "outAnimation": "moveRight",
+        "outFrames": 30
+      },
+      "154_UI button/bag ui/enhance paper": {
+        "x": 553,
+        "y": 92,
+        "attachedTo": "141",
+        "offsetX": 18.65000000000009,
+        "offsetY": 77
+      },
+      "147_UI button/bag ui/select weapon slot": {
+        "x": 99,
+        "y": 562,
+        "attachedTo": "140",
+        "offsetX": 45,
+        "offsetY": 537
+      },
+      "146_UI button/bag ui/select weapon slot": {
+        "x": 99,
+        "y": 435,
+        "attachedTo": "140",
+        "offsetX": 45,
+        "offsetY": 410
+      },
+      "145_UI button/bag ui/select weapon slot": {
+        "x": 99,
+        "y": 309,
+        "attachedTo": "140",
+        "offsetX": 45,
+        "offsetY": 284
+      },
+      "144_UI button/bag ui/select weapon slot": {
+        "x": 94,
+        "y": 185,
+        "attachedTo": "140",
+        "offsetX": 40,
+        "offsetY": 160
+      },
+      "143_UI button/bag ui/select weapon slot": {
+        "x": 94,
+        "y": 57,
+        "attachedTo": "140",
+        "offsetX": 40,
+        "offsetY": 32
+      },
+      "156_UI button/bag ui/equipment bag": {
+        "x": 985.8,
+        "y": 163,
+        "attachedTo": "141",
+        "offsetX": 451.45000000000005,
+        "offsetY": 148
+      },
+      "155_UI button/bag ui/equipment bag": {
+        "x": 690,
+        "y": 163,
+        "attachedTo": "141",
+        "offsetX": 155.6500000000001,
+        "offsetY": 148
+      },
+      "168_UI button/scroll ui/scroll armor 20%": {
+        "x": 1148,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 613.6500000000001,
+        "offsetY": 405
+      },
+      "167_UI button/scroll ui/scroll armor 50%": {
+        "x": 1033,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 498.6500000000001,
+        "offsetY": 405
+      },
+      "166_UI button/scroll ui/scroll armor 100%": {
+        "x": 916,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 381.6500000000001,
+        "offsetY": 405
+      },
+      "165_UI button/scroll ui/scroll weapon 20%": {
+        "x": 804,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 269.6500000000001,
+        "offsetY": 405
+      },
+      "164_UI button/scroll ui/scroll weapon 50%": {
+        "x": 690,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 155.6500000000001,
+        "offsetY": 405
+      },
+      "163_UI button/scroll ui/scroll weapon 100%": {
+        "x": 578,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 43.65000000000009,
+        "offsetY": 405
+      },
+      "162_UI button/bag ui/equipment bag": {
+        "x": 1143,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 608.6500000000001,
+        "offsetY": 398
+      },
+      "161_UI button/bag ui/equipment bag": {
+        "x": 1027.4,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 493.0500000000002,
+        "offsetY": 398
+      },
+      "160_UI button/bag ui/equipment bag": {
+        "x": 911.4,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 377.05000000000007,
+        "offsetY": 398
+      },
+      "159_UI button/bag ui/equipment bag": {
+        "x": 798,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 263.6500000000001,
+        "offsetY": 398
+      },
+      "158_UI button/bag ui/equipment bag": {
+        "x": 685,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 150.6500000000001,
+        "offsetY": 398
+      },
+      "157_UI button/bag ui/equipment bag": {
+        "x": 572,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 37.65000000000009,
+        "offsetY": 398
+      },
+      "153_UI button/Exit button": {
+        "x": 21.549999999999898,
+        "y": 0,
+        "attachedTo": "140",
+        "offsetX": -32.4500000000001,
+        "offsetY": -25
+      },
+      "225_UI button/reset button": {
+        "x": 408.2,
+        "y": 579,
+        "attachedTo": "140",
+        "offsetX": 354.2,
+        "offsetY": 554
+      },
+      "142_UI button/H battle ui/TPSP bar": {
+        "x": 1014.8,
+        "y": 31,
+        "attachedTo": "141",
+        "offsetX": 480.45000000000005,
+        "offsetY": 16
+      },
+      "226_UI button/scroll ui/reset scroll": {
+        "x": 1034.8,
+        "y": 40,
+        "attachedTo": "141",
+        "offsetX": 500.45000000000005,
+        "offsetY": 25
+      },
+      "224_UI button/reset button": {
+        "x": 408,
+        "y": 450,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 425
+      },
+      "223_UI button/reset button": {
+        "x": 408,
+        "y": 325,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 300
+      },
+      "222_UI button/reset button": {
+        "x": 408,
+        "y": 202,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 177
+      },
+      "221_UI button/reset button": {
+        "x": 408,
+        "y": 75,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 50
+      }
+    },
+    "map_4": {
+      "98_UI button/bag ui/equipment bag background": {
+        "x": 524,
+        "y": 17,
+        "animation": "right",
+        "frames": 30,
+        "outAnimation": "moveRight",
+        "outFrames": 30
+      },
+      "97_UI button/bag ui/weapon defend equip background": {
+        "x": 53,
+        "y": 8,
+        "animation": "left",
+        "frames": 30,
+        "outAnimation": "moveLeft",
+        "outFrames": 30
+      },
+      "101_UI button/bag ui/scroll or equipment": {
+        "attachedTo": "98",
+        "offsetX": 28,
+        "offsetY": 47
+      },
+      "102_UI button/bag ui/scroll or equipment": {
+        "attachedTo": "98",
+        "offsetX": 212,
+        "offsetY": 47
+      },
+      "100_UI button/bag ui/right cursor": {
+        "attachedTo": "98",
+        "offsetX": 244,
+        "offsetY": 81,
+        "x": 768,
+        "y": 98
+      },
+      "99_UI button/bag ui/left cursor": {
+        "attachedTo": "98",
+        "offsetX": 22,
+        "offsetY": 79,
+        "x": 546,
+        "y": 98
+      },
+      "129_UI button/bag ui/player battle power": {
+        "attachedTo": "97",
+        "offsetX": 194,
+        "offsetY": 160
+      },
+      "130_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 184
+      },
+      "131_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 280
+      },
+      "132_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 376
+      },
+      "133_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 472
+      },
+      "134_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 568
+      },
+      "103_UI button/bag ui/player equip": {
+        "attachedTo": "97",
+        "offsetX": 187,
+        "offsetY": 208
+      },
+      "104_UI button/Exit button": {
+        "attachedTo": "98",
+        "offsetX": 652,
+        "offsetY": -9
+      }
+    },
+    "map_5": {
+      "98_UI button/bag ui/equipment bag background": {
+        "x": 524,
+        "y": 17,
+        "animation": "right",
+        "frames": 30,
+        "outAnimation": "moveRight",
+        "outFrames": 30
+      },
+      "97_UI button/bag ui/weapon defend equip background": {
+        "x": 53,
+        "y": 8,
+        "animation": "left",
+        "frames": 30,
+        "outAnimation": "moveLeft",
+        "outFrames": 30
+      },
+      "101_UI button/bag ui/scroll or equipment": {
+        "attachedTo": "98",
+        "offsetX": 28,
+        "offsetY": 47
+      },
+      "102_UI button/bag ui/scroll or equipment": {
+        "attachedTo": "98",
+        "offsetX": 212,
+        "offsetY": 47
+      },
+      "100_UI button/bag ui/right cursor": {
+        "attachedTo": "98",
+        "offsetX": 244,
+        "offsetY": 81,
+        "x": 768,
+        "y": 98
+      },
+      "99_UI button/bag ui/left cursor": {
+        "attachedTo": "98",
+        "offsetX": 22,
+        "offsetY": 79,
+        "x": 546,
+        "y": 98
+      },
+      "129_UI button/bag ui/player battle power": {
+        "attachedTo": "97",
+        "offsetX": 194,
+        "offsetY": 160
+      },
+      "130_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 184
+      },
+      "131_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 280
+      },
+      "132_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 376
+      },
+      "133_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 472
+      },
+      "134_UI button/bag ui/equipment bag": {
+        "attachedTo": "97",
+        "offsetX": 35,
+        "offsetY": 568
+      },
+      "103_UI button/bag ui/player equip": {
+        "attachedTo": "97",
+        "offsetX": 187,
+        "offsetY": 208
+      },
+      "104_UI button/Exit button": {
+        "attachedTo": "98",
+        "offsetX": 652,
+        "offsetY": -9
+      }
+    }
+  },
+  "commonEvents": {
+    "commonEvent": {
+      "180_UI button/equipment ui/wood equipment/wood 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 206
+      },
+      "181_UI button/equipment ui/wood equipment/wood 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 206
+      },
+      "182_UI button/equipment ui/wood equipment/wood 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 206
+      },
+      "183_UI button/equipment ui/wood equipment/wood 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 206
+      },
+      "184_UI button/equipment ui/wood equipment/wood 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 206
+      },
+      "185_UI button/equipment ui/wood equipment/blue 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 326
+      },
+      "186_UI button/equipment ui/wood equipment/blue 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 326
+      },
+      "187_UI button/equipment ui/wood equipment/blue 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 326
+      },
+      "188_UI button/equipment ui/wood equipment/blue 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 326
+      },
+      "189_UI button/equipment ui/wood equipment/blue 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 326
+      },
+      "190_UI button/equipment ui/wood equipment/red 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 446
+      },
+      "191_UI button/equipment ui/wood equipment/red 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 446
+      },
+      "192_UI button/equipment ui/wood equipment/red 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 446
+      },
+      "193_UI button/equipment ui/wood equipment/red 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 446
+      },
+      "194_UI button/equipment ui/wood equipment/red 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 446
+      },
+      "195_UI button/equipment ui/wood equipment/gold 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 566
+      },
+      "196_UI button/equipment ui/wood equipment/gold 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 566
+      },
+      "197_UI button/equipment ui/wood equipment/gold 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 566
+      },
+      "198_UI button/equipment ui/wood equipment/gold 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 566
+      },
+      "199_UI button/equipment ui/wood equipment/gold 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 566
+      },
+      "105_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 31,
+        "offsetY": 193
+      },
+      "106_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 171,
+        "offsetY": 193
+      },
+      "107_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 311,
+        "offsetY": 193
+      },
+      "108_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 451,
+        "offsetY": 193
+      },
+      "109_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 591,
+        "offsetY": 193
+      },
+      "110_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 31,
+        "offsetY": 313
+      },
+      "111_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 171,
+        "offsetY": 313
+      },
+      "112_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 311,
+        "offsetY": 313
+      },
+      "113_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 451,
+        "offsetY": 313
+      },
+      "114_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 591,
+        "offsetY": 313
+      },
+      "115_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 31,
+        "offsetY": 433
+      },
+      "116_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 171,
+        "offsetY": 433
+      },
+      "117_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 311,
+        "offsetY": 433
+      },
+      "118_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 451,
+        "offsetY": 433
+      },
+      "119_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 591,
+        "offsetY": 433
+      },
+      "120_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 31,
+        "offsetY": 553
+      },
+      "121_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 171,
+        "offsetY": 553
+      },
+      "122_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 311,
+        "offsetY": 553
+      },
+      "123_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 451,
+        "offsetY": 553
+      },
+      "124_UI button/bag ui/equipment bag": {
+        "attachedTo": "98",
+        "offsetX": 591,
+        "offsetY": 553
+      },
+      "135_UI button/equipment ui/wood equipment/wood 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/wood equipment/wood 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/wood equipment/wood 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/wood equipment/wood 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/wood equipment/wood 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "148_UI button/equipment ui/wood equipment/wood 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/wood equipment/wood 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/wood equipment/wood 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/wood equipment/wood 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/wood equipment/wood 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "175_UI button/bag ui/upgrade button": {
+        "x": 791,
+        "y": 289
+      },
+      "180_UI button/equipment ui/sand gold equipment/sand 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 206
+      },
+      "181_UI button/equipment ui/sand gold equipment/sand 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 206
+      },
+      "182_UI button/equipment ui/sand gold equipment/sand 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 206
+      },
+      "183_UI button/equipment ui/sand gold equipment/sand 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 206
+      },
+      "184_UI button/equipment ui/sand gold equipment/sand 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 206
+      },
+      "185_UI button/equipment ui/sand gold equipment/sand blue 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 326
+      },
+      "186_UI button/equipment ui/sand gold equipment/sand blue 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 326
+      },
+      "187_UI button/equipment ui/sand gold equipment/sand blue 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 326
+      },
+      "188_UI button/equipment ui/sand gold equipment/sand blue 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 326
+      },
+      "189_UI button/equipment ui/sand gold equipment/sand blue 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 326
+      },
+      "190_UI button/equipment ui/sand gold equipment/sand red 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 446
+      },
+      "191_UI button/equipment ui/sand gold equipment/sand red 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 446
+      },
+      "192_UI button/equipment ui/sand gold equipment/sand red 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 446
+      },
+      "193_UI button/equipment ui/sand gold equipment/sand red 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 446
+      },
+      "194_UI button/equipment ui/sand gold equipment/sand red 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 446
+      },
+      "195_UI button/equipment ui/sand gold equipment/sand gold 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 566
+      },
+      "196_UI button/equipment ui/sand gold equipment/sand gold 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 566
+      },
+      "197_UI button/equipment ui/sand gold equipment/sand gold 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 566
+      },
+      "198_UI button/equipment ui/sand gold equipment/sand gold 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 566
+      },
+      "199_UI button/equipment ui/sand gold equipment/sand gold 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 566
+      },
+      "180_UI button/equipment ui/iron equipment/iron 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 206
+      },
+      "181_UI button/equipment ui/iron equipment/iron 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 206
+      },
+      "182_UI button/equipment ui/iron equipment/iron 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 206
+      },
+      "183_UI button/equipment ui/iron equipment/iron 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 206
+      },
+      "184_UI button/equipment ui/iron equipment/iron 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 206
+      },
+      "185_UI button/equipment ui/iron equipment/iron blue 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 326
+      },
+      "186_UI button/equipment ui/iron equipment/iron blue 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 326
+      },
+      "187_UI button/equipment ui/iron equipment/iron blue 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 326
+      },
+      "188_UI button/equipment ui/iron equipment/iron blue 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 326
+      },
+      "189_UI button/equipment ui/iron equipment/iron blue 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 326
+      },
+      "190_UI button/equipment ui/iron equipment/iron red 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 446
+      },
+      "191_UI button/equipment ui/iron equipment/iron red 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 446
+      },
+      "192_UI button/equipment ui/iron equipment/iron red 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 446
+      },
+      "193_UI button/equipment ui/iron equipment/iron red 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 446
+      },
+      "194_UI button/equipment ui/iron equipment/iron red 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 446
+      },
+      "195_UI button/equipment ui/iron equipment/iron gold 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 566
+      },
+      "196_UI button/equipment ui/iron equipment/iron gold 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 566
+      },
+      "197_UI button/equipment ui/iron equipment/iron gold 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 566
+      },
+      "198_UI button/equipment ui/iron equipment/iron gold 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 566
+      },
+      "199_UI button/equipment ui/iron equipment/iron gold 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 566
+      },
+      "180_UI button/equipment ui/metal equipment/metal 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 206
+      },
+      "181_UI button/equipment ui/metal equipment/metal 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 206
+      },
+      "182_UI button/equipment ui/metal equipment/metal 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 206
+      },
+      "183_UI button/equipment ui/metal equipment/metal 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 206
+      },
+      "184_UI button/equipment ui/metal equipment/metal 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 206
+      },
+      "185_UI button/equipment ui/metal equipment/metal blue 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 326
+      },
+      "186_UI button/equipment ui/metal equipment/metal blue 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 326
+      },
+      "187_UI button/equipment ui/metal equipment/metal blue 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 326
+      },
+      "188_UI button/equipment ui/metal equipment/metal 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 326
+      },
+      "189_UI button/equipment ui/metal equipment/metal blue 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 326
+      },
+      "190_UI button/equipment ui/metal equipment/metal red 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 446
+      },
+      "191_UI button/equipment ui/metal equipment/metal red 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 446
+      },
+      "192_UI button/equipment ui/metal equipment/metal red 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 446
+      },
+      "193_UI button/equipment ui/metal equipment/metal red 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 446
+      },
+      "194_UI button/equipment ui/metal equipment/metal red 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 446
+      },
+      "195_UI button/equipment ui/metal equipment/metal gold 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 566
+      },
+      "196_UI button/equipment ui/metal equipment/metal gold 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 566
+      },
+      "197_UI button/equipment ui/metal equipment/metal gold 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 566
+      },
+      "198_UI button/equipment ui/metal equipment/metal gold 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 566
+      },
+      "199_UI button/equipment ui/metal equipment/metal gold 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 566
+      },
+      "180_UI button/equipment ui/star equipment/star 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 206
+      },
+      "181_UI button/equipment ui/star equipment/star 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 206
+      },
+      "182_UI button/equipment ui/star equipment/star 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 206
+      },
+      "183_UI button/equipment ui/star equipment/star 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 206
+      },
+      "184_UI button/equipment ui/star equipment/star 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 206
+      },
+      "185_UI button/equipment ui/star equipment/star blue 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 326
+      },
+      "186_UI button/equipment ui/star equipment/star blue 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 326
+      },
+      "187_UI button/equipment ui/star equipment/star blue 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 326
+      },
+      "188_UI button/equipment ui/star equipment/star blue 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 326
+      },
+      "189_UI button/equipment ui/star equipment/star blue 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 326
+      },
+      "190_UI button/equipment ui/star equipment/star red 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 446
+      },
+      "191_UI button/equipment ui/star equipment/star red 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 446
+      },
+      "192_UI button/equipment ui/star equipment/star red 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 446
+      },
+      "193_UI button/equipment ui/star equipment/star red 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 446
+      },
+      "194_UI button/equipment ui/star equipment/star red 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 446
+      },
+      "195_UI button/equipment ui/star equipment/star gold 4": {
+        "attachedTo": "98",
+        "offsetX": 44,
+        "offsetY": 566
+      },
+      "196_UI button/equipment ui/star equipment/star gold 2": {
+        "attachedTo": "98",
+        "offsetX": 186,
+        "offsetY": 566
+      },
+      "197_UI button/equipment ui/star equipment/star gold 5": {
+        "attachedTo": "98",
+        "offsetX": 326,
+        "offsetY": 566
+      },
+      "198_UI button/equipment ui/star equipment/star gold 3": {
+        "attachedTo": "98",
+        "offsetX": 466,
+        "offsetY": 566
+      },
+      "199_UI button/equipment ui/star equipment/star gold 1": {
+        "attachedTo": "98",
+        "offsetX": 606,
+        "offsetY": 566
+      },
+      "135_UI button/equipment ui/wood equipment/blue 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/wood equipment/blue 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/wood equipment/blue 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/wood equipment/blue 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/wood equipment/blue 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/wood equipment/red 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/wood equipment/red 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/wood equipment/red 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/wood equipment/red 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/wood equipment/red 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/wood equipment/gold 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/wood equipment/gold 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/wood equipment/gold 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/wood equipment/gold 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/wood equipment/gold 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/sand gold equipment/sand 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/sand gold equipment/sand 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/sand gold equipment/sand 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/sand gold equipment/sand 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/sand gold equipment/sand 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/sand gold equipment/sand blue 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/sand gold equipment/sand blue 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/sand gold equipment/sand blue 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/sand gold equipment/sand blue 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/sand gold equipment/sand blue 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/sand gold equipment/sand red 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/sand gold equipment/sand red 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/sand gold equipment/sand red 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/sand gold equipment/sand red 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/sand gold equipment/sand red 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/sand gold equipment/sand gold 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/sand gold equipment/sand gold 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/sand gold equipment/sand gold 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/sand gold equipment/sand gold 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/sand gold equipment/sand gold 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/iron equipment/iron 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/iron equipment/iron 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/iron equipment/iron 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/iron equipment/iron 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/iron equipment/iron 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/iron equipment/iron blue 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/iron equipment/iron blue 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/iron equipment/iron blue 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/iron equipment/iron blue 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/iron equipment/iron blue 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/iron equipment/iron red 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/iron equipment/iron red 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/iron equipment/iron red 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/iron equipment/iron red 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/iron equipment/iron red 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/iron equipment/iron gold 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/iron equipment/iron gold 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/iron equipment/iron gold 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/iron equipment/iron gold 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/iron equipment/iron gold 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/metal equipment/metal 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/metal equipment/metal 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/metal equipment/metal 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/metal equipment/metal 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/metal equipment/metal 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/metal equipment/metal blue 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/metal equipment/metal blue 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/metal equipment/metal blue 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/metal equipment/metal blue 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/metal equipment/metal blue 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/metal equipment/metal red 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/metal equipment/metal red 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/metal equipment/metal red 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/metal equipment/metal red 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/metal equipment/metal red 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/metal equipment/metal gold 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/metal equipment/metal gold 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/metal equipment/metal gold 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/metal equipment/metal gold 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/metal equipment/metal gold 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/star equipment/star 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/star equipment/star 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/star equipment/star 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/star equipment/star 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/star equipment/star 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/star equipment/star blue 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/star equipment/star blue 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/star equipment/star blue 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/star equipment/star blue 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/star equipment/star blue 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/star equipment/star red 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/star equipment/star red 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/star equipment/star red 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/star equipment/star red 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/star equipment/star red 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "135_UI button/equipment ui/star equipment/star gold 4": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 192
+      },
+      "136_UI button/equipment ui/star equipment/star gold 2": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 288
+      },
+      "137_UI button/equipment ui/star equipment/star gold 5": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 384
+      },
+      "138_UI button/equipment ui/star equipment/star gold 3": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 480
+      },
+      "139_UI button/equipment ui/star equipment/star gold 1": {
+        "attachedTo": "97",
+        "offsetX": 43,
+        "offsetY": 576
+      },
+      "140_UI button/bag ui/weapon defend equip background": {
+        "x": 54,
+        "y": 25,
+        "animation": "left",
+        "frames": 30,
+        "outAnimation": "moveLeft",
+        "outFrames": 30
+      },
+      "141_UI button/bag ui/equipment bag background": {
+        "x": 534.3499999999999,
+        "y": 15,
+        "animation": "right",
+        "frames": 30,
+        "outAnimation": "moveRight",
+        "outFrames": 30
+      },
+      "154_UI button/bag ui/enhance paper": {
+        "x": 553,
+        "y": 92,
+        "attachedTo": "141",
+        "offsetX": 18.65000000000009,
+        "offsetY": 77
+      },
+      "147_UI button/bag ui/select weapon slot": {
+        "x": 99,
+        "y": 562,
+        "attachedTo": "140",
+        "offsetX": 45,
+        "offsetY": 537
+      },
+      "146_UI button/bag ui/select weapon slot": {
+        "x": 99,
+        "y": 435,
+        "attachedTo": "140",
+        "offsetX": 45,
+        "offsetY": 410
+      },
+      "145_UI button/bag ui/select weapon slot": {
+        "x": 99,
+        "y": 309,
+        "attachedTo": "140",
+        "offsetX": 45,
+        "offsetY": 284
+      },
+      "144_UI button/bag ui/select weapon slot": {
+        "x": 94,
+        "y": 185,
+        "attachedTo": "140",
+        "offsetX": 40,
+        "offsetY": 160
+      },
+      "143_UI button/bag ui/select weapon slot": {
+        "x": 94,
+        "y": 57,
+        "attachedTo": "140",
+        "offsetX": 40,
+        "offsetY": 32
+      },
+      "156_UI button/bag ui/equipment bag": {
+        "x": 985.8,
+        "y": 163,
+        "attachedTo": "141",
+        "offsetX": 451.45000000000005,
+        "offsetY": 148
+      },
+      "155_UI button/bag ui/equipment bag": {
+        "x": 690,
+        "y": 163,
+        "attachedTo": "141",
+        "offsetX": 155.6500000000001,
+        "offsetY": 148
+      },
+      "168_UI button/scroll ui/scroll armor 20%": {
+        "x": 1148,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 613.6500000000001,
+        "offsetY": 405
+      },
+      "167_UI button/scroll ui/scroll armor 50%": {
+        "x": 1033,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 498.6500000000001,
+        "offsetY": 405
+      },
+      "166_UI button/scroll ui/scroll armor 100%": {
+        "x": 916,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 381.6500000000001,
+        "offsetY": 405
+      },
+      "165_UI button/scroll ui/scroll weapon 20%": {
+        "x": 804,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 269.6500000000001,
+        "offsetY": 405
+      },
+      "164_UI button/scroll ui/scroll weapon 50%": {
+        "x": 690,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 155.6500000000001,
+        "offsetY": 405
+      },
+      "163_UI button/scroll ui/scroll weapon 100%": {
+        "x": 578,
+        "y": 420,
+        "attachedTo": "141",
+        "offsetX": 43.65000000000009,
+        "offsetY": 405
+      },
+      "162_UI button/bag ui/equipment bag": {
+        "x": 1143,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 608.6500000000001,
+        "offsetY": 398
+      },
+      "161_UI button/bag ui/equipment bag": {
+        "x": 1027.4,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 493.0500000000002,
+        "offsetY": 398
+      },
+      "160_UI button/bag ui/equipment bag": {
+        "x": 911.4,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 377.05000000000007,
+        "offsetY": 398
+      },
+      "159_UI button/bag ui/equipment bag": {
+        "x": 798,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 263.6500000000001,
+        "offsetY": 398
+      },
+      "158_UI button/bag ui/equipment bag": {
+        "x": 685,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 150.6500000000001,
+        "offsetY": 398
+      },
+      "157_UI button/bag ui/equipment bag": {
+        "x": 572,
+        "y": 413,
+        "attachedTo": "141",
+        "offsetX": 37.65000000000009,
+        "offsetY": 398
+      },
+      "153_UI button/Exit button": {
+        "x": 21.549999999999898,
+        "y": 0,
+        "attachedTo": "140",
+        "offsetX": -32.4500000000001,
+        "offsetY": -25
+      },
+      "225_UI button/reset button": {
+        "x": 408.2,
+        "y": 579,
+        "attachedTo": "140",
+        "offsetX": 354.2,
+        "offsetY": 554
+      },
+      "142_UI button/H battle ui/TPSP bar": {
+        "x": 1014.8,
+        "y": 31,
+        "attachedTo": "141",
+        "offsetX": 480.45000000000005,
+        "offsetY": 16
+      },
+      "226_UI button/scroll ui/reset scroll": {
+        "x": 1034.8,
+        "y": 40,
+        "attachedTo": "141",
+        "offsetX": 500.45000000000005,
+        "offsetY": 25
+      },
+      "224_UI button/reset button": {
+        "x": 408,
+        "y": 450,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 425
+      },
+      "223_UI button/reset button": {
+        "x": 408,
+        "y": 325,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 300
+      },
+      "222_UI button/reset button": {
+        "x": 408,
+        "y": 202,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 177
+      },
+      "221_UI button/reset button": {
+        "x": 408,
+        "y": 75,
+        "attachedTo": "140",
+        "offsetX": 354,
+        "offsetY": 50
+      },
+      "148_UI button/equipment ui/wood equipment/blue 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/wood equipment/blue 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/wood equipment/blue 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/wood equipment/blue 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/wood equipment/blue 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/wood equipment/red 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/wood equipment/red 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/wood equipment/red 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/wood equipment/red 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/wood equipment/red 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/wood equipment/gold 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/wood equipment/gold 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/wood equipment/gold 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/wood equipment/gold 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/wood equipment/gold 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/sand gold equipment/sand 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/sand gold equipment/sand 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/sand gold equipment/sand 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/sand gold equipment/sand 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/sand gold equipment/sand 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/sand gold equipment/sand blue 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/sand gold equipment/sand blue 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/sand gold equipment/sand blue 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/sand gold equipment/sand blue 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/sand gold equipment/sand blue 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/sand gold equipment/sand red 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/sand gold equipment/sand red 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/sand gold equipment/sand red 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/sand gold equipment/sand red 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/sand gold equipment/sand red 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/sand gold equipment/sand gold 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/sand gold equipment/sand gold 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/sand gold equipment/sand gold 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/sand gold equipment/sand gold 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/sand gold equipment/sand gold 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/iron equipment/iron 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/iron equipment/iron 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/iron equipment/iron 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/iron equipment/iron 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/iron equipment/iron 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/iron equipment/iron blue 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/iron equipment/iron blue 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/iron equipment/iron blue 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/iron equipment/iron blue 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/iron equipment/iron blue 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/iron equipment/iron red 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/iron equipment/iron red 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/iron equipment/iron red 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/iron equipment/iron red 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/iron equipment/iron red 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/iron equipment/iron gold 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/iron equipment/iron gold 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/iron equipment/iron gold 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/iron equipment/iron gold 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/iron equipment/iron gold 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/metal equipment/metal 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/metal equipment/metal 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/metal equipment/metal 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/metal equipment/metal 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/metal equipment/metal 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/metal equipment/metal blue 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/metal equipment/metal blue 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/metal equipment/metal blue 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/metal equipment/metal blue 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/metal equipment/metal blue 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/metal equipment/metal red 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/metal equipment/metal red 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/metal equipment/metal red 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/metal equipment/metal red 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/metal equipment/metal red 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/metal equipment/metal gold 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/metal equipment/metal gold 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/metal equipment/metal gold 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/metal equipment/metal gold 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/metal equipment/metal gold 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/star equipment/star 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/star equipment/star 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/star equipment/star 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/star equipment/star 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/star equipment/star 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/star equipment/star blue 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/star equipment/star blue 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/star equipment/star blue 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/star equipment/star blue 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/star equipment/star blue 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/star equipment/star red 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/star equipment/star red 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/star equipment/star red 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/star equipment/star red 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/star equipment/star red 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "148_UI button/equipment ui/star equipment/star gold 4": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 39
+      },
+      "149_UI button/equipment ui/star equipment/star gold 2": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 167
+      },
+      "150_UI button/equipment ui/star equipment/star gold 5": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 290
+      },
+      "151_UI button/equipment ui/star equipment/star gold 3": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 418
+      },
+      "152_UI button/equipment ui/star equipment/star gold 1": {
+        "attachedTo": "140",
+        "offsetX": 90,
+        "offsetY": 543
+      },
+      "202_UI button/H status ui/HCG status": {
+        "x": 384,
+        "y": 48
+      }
+    }
+  }
+}

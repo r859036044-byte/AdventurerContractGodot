@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://chinb5pk4ohc4"
+path="res://.godot/imported/DarknessAll3.efkefc-5797a3196ac0129c3d7d3fa283d6195b.res"
+
+[deps]
+
+source_file="res://RMZEffects/DarknessAll3.efkefc"
+dest_files=["res://.godot/imported/DarknessAll3.efkefc-5797a3196ac0129c3d7d3fa283d6195b.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://dl6uwfj3cnw1g"
+path="res://.godot/imported/Flash.efkefc-f99c45d24ead2fda582086a18ea0a58b.res"
+
+[deps]
+
+source_file="res://RMZEffects/Flash.efkefc"
+dest_files=["res://.godot/imported/Flash.efkefc-f99c45d24ead2fda582086a18ea0a58b.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

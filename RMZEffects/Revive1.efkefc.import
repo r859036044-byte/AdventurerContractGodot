@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://ck3m7ylbji47t"
+path="res://.godot/imported/Revive1.efkefc-19cab408578dd95000a437a3343eb42c.res"
+
+[deps]
+
+source_file="res://RMZEffects/Revive1.efkefc"
+dest_files=["res://.godot/imported/Revive1.efkefc-19cab408578dd95000a437a3343eb42c.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true

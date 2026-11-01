@@ -1,0 +1,281 @@
+{
+  "date": "2026-10-19",
+  "tool": "built-in image_gen",
+  "prompts": {
+    "a": "Production RPG Maker character sprite sheet, transparent background, exact 1536x1024 canvas. Reference image is STYLE only: match Japanese anime chibi pixel art large expressive head tiny body 2-head tall, dark thin outlines, saturated restrained colors, fully clothed adult fantasy NPCs. EXACT GRID 6 columns x4 rows of SQUARE 256x256 cells, no margins. TWO characters each occupying 3 columns across ALL FOUR rows. Left character: adult male blacksmith, brown swept hair, short beard, leather apron over rust shirt, gloves and boots, small belt hammer. Right character: adult female guild clerk, chestnut bob hair, cream blouse, blue vest and long navy skirt, small satchel. Each cell contains one complete centered character, feet consistently at same baseline 80%cell height, body approx60%cell height. Row1 all facing SOUTH toward viewer; row2 all facing LEFT; row3 all facing RIGHT; row4 all facing NORTH back view. Each 3-column group is left-foot step / neutral standing / right-foot step. Identical design and size across all12 poses per character. Crisp real pixel clusters, not painting, no blur, no labels no gridlines no text no ground shadows. No nudity. Leave empty transparent padding between figures, never overlap adjacent cells.",
+    "b": "Production RPG Maker character sprite sheet, transparent background, exact 1536x1024 canvas. Reference image is STYLE only: match Japanese anime chibi pixel art large expressive head tiny body 2-head tall, dark thin outlines, saturated restrained colors, fully clothed adult fantasy NPCs. EXACT GRID 6 columns x4 rows of SQUARE 256x256 cells, no margins. TWO characters each occupying 3 columns across ALL FOUR rows. Left character: adult male guild guard, silver short hair, blue scarf, light silver armor over dark navy tunic, brown boots, sheathed sword on belt. Right character: adult female adventurer ranger, auburn ponytail, forest green short cape over fully covered brown tunic and trousers, tall boots, crossbody pouch and sheathed dagger. Each cell contains one complete centered character, feet consistently at same baseline 80%cell height, body approx60%cell height. Row1 all facing SOUTH toward viewer; row2 all facing LEFT; row3 all facing RIGHT; row4 all facing NORTH back view. Each 3-column group is left-foot step / neutral standing / right-foot step. Identical design and size across all12 poses per character. Crisp real pixel clusters, not painting, no blur, no labels no gridlines no text no ground shadows. No nudity. Leave empty transparent padding between figures, never overlap adjacent cells.",
+    "alpha": "Edit target: the attached TWO-character sprite sheet. Remove the entire brown gradient background and every shadow/glow, replacing with genuine alpha=0 TRANSPARENCY. Preserve all24 sprites exactly, their pixel colors, poses, locations and full image dimensions1536x1024. Preserve dark outline pixels of characters. No new background, no checkerboard baked in, no colored matte. Output RGBA transparent PNG for a game spritesheet."
+  },
+  "sourceSheets": [
+    "rmz/img/characters/generated_sources/GuildNPC_A.png",
+    "rmz/img/characters/generated_sources/GuildNPC_B.png"
+  ],
+  "gameAssets": [
+    "rmz/img/characters/$GuildNPC_Smith.png",
+    "rmz/img/characters/$GuildNPC_Clerk.png",
+    "rmz/img/characters/$GuildNPC_Guard.png",
+    "rmz/img/characters/$GuildNPC_Ranger.png"
+  ],
+  "frame": "48x48；每位3列×4行，144x192；順序下左 右上，各方向3幀。固定縮放、腳底對齊。",
+  "replaceLog": [
+    {
+      "map": 2,
+      "id": 25,
+      "name": "鐵匠",
+      "style": "Smith",
+      "pages": 4
+    },
+    {
+      "map": 2,
+      "id": 92,
+      "name": "存錢貸款股票人",
+      "style": "Clerk",
+      "pages": 3
+    },
+    {
+      "map": 2,
+      "id": 40,
+      "name": "雜魚1",
+      "style": "Guard",
+      "pages": 2
+    },
+    {
+      "map": 2,
+      "id": 57,
+      "name": "雜魚9",
+      "style": "Guard",
+      "pages": 2
+    },
+    {
+      "map": 2,
+      "id": 78,
+      "name": "護衛1",
+      "style": "Guard",
+      "pages": 1
+    },
+    {
+      "map": 2,
+      "id": 79,
+      "name": "護衛2",
+      "style": "Guard",
+      "pages": 1
+    },
+    {
+      "map": 2,
+      "id": 42,
+      "name": "雜魚2",
+      "style": "Ranger",
+      "pages": 2
+    },
+    {
+      "map": 2,
+      "id": 55,
+      "name": "雜魚7",
+      "style": "Ranger",
+      "pages": 2
+    },
+    {
+      "map": 2,
+      "id": 96,
+      "name": "黑市商人",
+      "style": "Ranger",
+      "pages": 3
+    },
+    {
+      "map": 2,
+      "id": 97,
+      "name": "奴隸區引路人",
+      "style": "Ranger",
+      "pages": 1
+    },
+    {
+      "map": 35,
+      "id": 25,
+      "name": "鐵匠",
+      "style": "Smith",
+      "pages": 4
+    },
+    {
+      "map": 35,
+      "id": 92,
+      "name": "存錢貸款股票人",
+      "style": "Clerk",
+      "pages": 3
+    },
+    {
+      "map": 35,
+      "id": 40,
+      "name": "雜魚1",
+      "style": "Guard",
+      "pages": 2
+    },
+    {
+      "map": 35,
+      "id": 57,
+      "name": "雜魚9",
+      "style": "Guard",
+      "pages": 2
+    },
+    {
+      "map": 35,
+      "id": 78,
+      "name": "護衛1",
+      "style": "Guard",
+      "pages": 1
+    },
+    {
+      "map": 35,
+      "id": 79,
+      "name": "護衛2",
+      "style": "Guard",
+      "pages": 1
+    },
+    {
+      "map": 35,
+      "id": 42,
+      "name": "雜魚2",
+      "style": "Ranger",
+      "pages": 2
+    },
+    {
+      "map": 35,
+      "id": 55,
+      "name": "雜魚7",
+      "style": "Ranger",
+      "pages": 2
+    },
+    {
+      "map": 35,
+      "id": 96,
+      "name": "黑市商人",
+      "style": "Ranger",
+      "pages": 3
+    },
+    {
+      "map": 35,
+      "id": 98,
+      "name": "奴隸區引路人",
+      "style": "Ranger",
+      "pages": 1
+    },
+    {
+      "map": 39,
+      "id": 2,
+      "name": "礦料加工",
+      "style": "Smith",
+      "pages": 1
+    },
+    {
+      "map": 39,
+      "id": 3,
+      "name": "藥草栽培",
+      "style": "Ranger",
+      "pages": 1
+    },
+    {
+      "map": 39,
+      "id": 4,
+      "name": "夜間巡守",
+      "style": "Guard",
+      "pages": 1
+    },
+    {
+      "map": 39,
+      "id": 5,
+      "name": "魔晶提煉",
+      "style": "Clerk",
+      "pages": 1
+    },
+    {
+      "map": 41,
+      "id": 4,
+      "name": "管理人瑟琳",
+      "style": "Clerk",
+      "pages": 1
+    },
+    {
+      "map": 42,
+      "id": 4,
+      "name": "牧場經營",
+      "style": "Smith",
+      "pages": 1
+    },
+    {
+      "map": 43,
+      "id": 4,
+      "name": "織布工房",
+      "style": "Clerk",
+      "pages": 1
+    },
+    {
+      "map": 43,
+      "id": 5,
+      "name": "礦料加工",
+      "style": "Smith",
+      "pages": 1
+    },
+    {
+      "map": 43,
+      "id": 6,
+      "name": "藥草栽培",
+      "style": "Ranger",
+      "pages": 1
+    },
+    {
+      "map": 43,
+      "id": 7,
+      "name": "夜間巡守",
+      "style": "Guard",
+      "pages": 1
+    },
+    {
+      "map": 43,
+      "id": 8,
+      "name": "魔晶提煉",
+      "style": "Clerk",
+      "pages": 1
+    }
+  ],
+  "additions": [
+    {
+      "map": 2,
+      "id": 98,
+      "name": "委託助理・米娜",
+      "x": 26,
+      "y": 24,
+      "style": "Clerk"
+    },
+    {
+      "map": 35,
+      "id": 99,
+      "name": "委託助理・米娜",
+      "x": 26,
+      "y": 24,
+      "style": "Clerk"
+    },
+    {
+      "map": 39,
+      "id": 13,
+      "name": "住宅街居民・莉可",
+      "x": 20,
+      "y": 24,
+      "style": "Ranger"
+    },
+    {
+      "map": 39,
+      "id": 14,
+      "name": "工房師傅・洛恩",
+      "x": 35,
+      "y": 18,
+      "style": "Smith"
+    },
+    {
+      "map": 39,
+      "id": 15,
+      "name": "牧場巡守・艾德",
+      "x": 40,
+      "y": 22,
+      "style": "Guard"
+    }
+  ]
+}

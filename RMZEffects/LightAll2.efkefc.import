@@ -1,0 +1,17 @@
+[remap]
+
+importer="effekseer.effect"
+type="Resource"
+uid="uid://s2n57gg1rirt"
+path="res://.godot/imported/LightAll2.efkefc-78f82fd2a41d14db17e4e20c29dab4e5.res"
+
+[deps]
+
+source_file="res://RMZEffects/LightAll2.efkefc"
+dest_files=["res://.godot/imported/LightAll2.efkefc-78f82fd2a41d14db17e4e20c29dab4e5.res"]
+
+[params]
+
+scale=1.0
+data_type=0
+compress=true
