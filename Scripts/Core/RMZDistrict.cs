@@ -34,7 +34,6 @@ public static partial class RMZDistrict
         if(who<0||who>=6||V(8201+who)==0)return "這位角色還沒有簽約，不能安排工作。";
         if(job==Ranch&&V(8141)==0)return "需要先購買牧場，才能安排牧場搾乳。";
         if(job==Ranch&&V(Preg+who)==0)return Names[who]+"目前沒有懷孕，也不在哺乳期，牧場搾乳只收懷孕中或哺乳中的角色。";
-        if(job==Hosting&&V(Preg+who)==1)return Names[who]+"懷孕中，不能排夜間接待。";
         int key=(Night(job)?8221:8211)+who;
         if(V(key)==job+1)return Names[who]+"已安排這項工作，不會重複計算人數。";
         Set(key,job+1);SyncAssignments();return Names[who]+"已安排「"+Jobs[job]+"」。\n同班原有工作已替換，下次換班結算產物。";
@@ -65,7 +64,7 @@ public static partial class RMZDistrict
                 int n=V(Assign+i)*Yield[i]*Lv(i);
                 if(n>0){RMZParty.GainItem(2101+i,n);produced[i]+=n;}
             }
-            if(hosted>0){int lv=Lv(Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;if(night){guestNotice+=CountHostShift();breedNotice+=TryConceive();}}
+            if(hosted>0){int lv=Lv(Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;if(night){guestNotice+=CountHostShift();breedNotice+=HostAccelerate();breedNotice+=TryConceive();}}
             worked++;Set(Fatigue,Math.Min(100,V(Fatigue)+(night?25:20)+(hosted>0?HostFatigue:0)));
         }
         Set(Last,target);
@@ -112,6 +111,10 @@ public static partial class RMZDistrict
                 if(RMZParty.NumItems(2106)<5)msg="需要 5 份牧場補給。";
                 else{RMZParty.GainItem(2106,-5);Set(738,V(738)+15);msg="交付牧場補給，獲得 15 隸章。";}
                 break;
+            case "craftBalm":msg=Craft(Balm);break;
+            case "craftPill":msg=Craft(Pill);break;
+            case "useBalm":msg=UseInducer(person,Balm);break;
+            case "usePill":msg=UseInducer(person,Pill);break;
             case "toggle":msg=ToggleContraception(person);break;
             case "ranchStatus":msg=BreedStatus();break;
             case "guest":msg=PlayGuest(person);break;
