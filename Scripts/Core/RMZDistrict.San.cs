@@ -3,11 +3,11 @@ namespace RMZ;
 // SAN 與主人：奴隸有 SAN（沿用原作變數 754～758，雙子共用 757；751＝最低SAN、752＝拒絕工作人數）。
 // 工作會消耗 SAN；低於 SanMin 就拒絕工作（排班自動取消、不能再排）。SAN 沒有自然恢復，
 // 只能由男主人在住宅「召喚奴隸」：同寢（+25）或配種（+60，她一定受孕、孩子是主人的）。每人每天一次。
-// 5 位角色（雙子算一位）都曾被主人配種 → 後宮奴隸結局（遊戲照常繼續）。
-// 變數：8370+序號＝最近陪伴的日期+1、8410+角色群(1～5)＝已被主人配種、8420＝已解鎖後宮結局、8430+群＝SAN 已初始化。
+// 5 位角色（雙子算一位，但雪瑤、雪霜兩人都要）都曾被主人配種 → 後宮奴隸結局（遊戲照常繼續）。
+// 變數：8370+序號＝最近陪伴的日期+1、8440+序號＝已被主人配種、8420＝已解鎖後宮結局、8430+群＝SAN 已初始化。
 public static partial class RMZDistrict
 {
-    const int SanBase=753, ServedDay=8370, BredFlag=8410, HaremEnding=8420, SanInit=8430;
+    const int SanBase=753, ServedDay=8370, BredFlag=8440, HaremEnding=8420, SanInit=8430;
     public const int SanMax=100, SanMin=30;
     const int LaborCost=1, HostSanCost=4, BreedReqSanCost=10, BirthSanCost=10, ServeGain=25, MasterGain=60;
 
@@ -60,9 +60,10 @@ public static partial class RMZDistrict
         }
     }
 
-    static bool AllBred(){for(int h=1;h<=5;h++)if(V(BredFlag+h)==0)return false;return true;}
-    static int BredCount(){int n=0;for(int h=1;h<=5;h++)if(V(BredFlag+h)>0)n++;return n;}
-    static readonly string[] GroupNames={"","尤梨卡","露娜","克萊爾","雪瑤＆雪霜","鈴音"};
+    // 角色群的每一位成員都被主人配種過才算完成（雙子要兩人都有）。
+    static bool GroupBred(int h){bool any=false;for(int w=0;w<6;w++)if(Heroines[w]==h){any=true;if(V(BredFlag+w)==0)return false;}return any;}
+    static bool AllBred(){for(int h=1;h<=5;h++)if(!GroupBred(h))return false;return true;}
+    static int BredCount(){int n=0;for(int h=1;h<=5;h++)if(GroupBred(h))n++;return n;}
 
     // 主人召喚奴隸。breed=false 為同寢，true 為配種（她一定受孕）。
     static string ServeMaster(int w,bool breed)
@@ -76,9 +77,10 @@ public static partial class RMZDistrict
         string msg=Names[w]+(breed?"被主人親自配種。":"陪伴了主人一夜。")+"\nSAN +"+gain+"（現在 "+San(w)+"/"+SanMax+"）。";
         if(breed){
             Set(Preg+w,1);Set(PregDays+w,PregnancyLength);Set(Father+w,2);Set(Req+w,0);Set(Breeds+w,V(Breeds+w)+1);SyncPregnantCount();
-            bool first=V(BredFlag+Heroines[w])==0;Set(BredFlag+Heroines[w],1);
+            Set(BredFlag+w,1);
             msg+="\n她懷孕了，孩子是主人的。（已被主人配種的角色 "+BredCount()+"/5）";
-            if(first&&AllBred()&&V(HaremEnding)==0){Set(HaremEnding,1);LoadPages(HaremPages);msg+="\n\n【後宮奴隸結局】已解鎖！";}
+            if(Heroines[w]==4&&!GroupBred(4))msg+="\n（雙子要兩人都被配種才算完成，還差"+Names[w==3?4:3]+"。）";
+            if(AllBred()&&V(HaremEnding)==0){Set(HaremEnding,1);LoadPages(HaremPages);msg+="\n\n【後宮奴隸結局】已解鎖！";}
         }
         SyncSan();return msg;
     }
@@ -97,10 +99,10 @@ public static partial class RMZDistrict
         for(int w=0;w<6;w++){
             if(V(8201+w)==0)continue;
             int sn=San(w);
-            s+="\n"+Names[w]+"：SAN "+sn+"/"+SanMax+(sn<SanMin?"（拒絕工作）":"")+(V(ServedDay+w)==V(61)+1?"｜今天已陪伴":"")+(V(BredFlag+Heroines[w])>0?"｜已配種":"");
+            s+="\n"+Names[w]+"：SAN "+sn+"/"+SanMax+(sn<SanMin?"（拒絕工作）":"")+(V(ServedDay+w)==V(61)+1?"｜今天已陪伴":"")+(V(BredFlag+w)>0?"｜已配種":"");
         }
         s+="\n已被主人配種的角色 "+BredCount()+"/5"+(V(HaremEnding)>0?"｜後宮奴隸結局：已解鎖":"");
-        if(V(HaremEnding)==0&&BredCount()<5){string miss="";for(int h=1;h<=5;h++)if(V(BredFlag+h)==0)miss+=(miss==""?"":"、")+GroupNames[h];s+="\n尚未配種："+miss;}
+        if(V(HaremEnding)==0&&BredCount()<5){string miss="";for(int w=0;w<6;w++)if(V(8201+w)>0&&V(BredFlag+w)==0)miss+=(miss==""?"":"、")+Names[w];s+="\n尚未配種："+miss;}
         return s;
     }
 }
