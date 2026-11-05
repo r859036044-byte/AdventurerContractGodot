@@ -8,12 +8,13 @@ namespace RMZ;
 // 全部用遊戲變數存檔：8300+序號＝階段(0一般／1懷孕中／2哺乳中)、8310+＝剩餘天數、8320+＝1表示停用避孕、8330+＝生產次數。
 public static partial class RMZDistrict
 {
-    const int Preg=8300, PregDays=8310, NoPill=8320, Births=8330, PregnantCount=750;
+    const int Preg=8300, PregDays=8310, NoPill=8320, Births=8330, Father=8340, PregnantCount=750;   // Father：懷孕中 0＝一般客人／不明，1＝她的神秘客人
     public const int PregnancyLength=6, LactationLength=10, ConceiveChance=25;   // 天、天、%
     public const int Balm=2108, Pill=2109;                                      // 催產香膏、催產藥（道具編號）
     const int BalmDrop=2, PillDrop=4, HostAccel=1;                              // 使用／接待一班縮短的孕期天數
     const int BalmHerb=1, BalmStamp=5, PillHerb=3, PillStamp=10;                // 製作成本：乾燥藥材(2103)＋隸章
-    const int MilkPregnant=1, MilkLactating=4;                                   // 每人每班鮮乳（乘牧場搾乳設施等級）
+    const int MilkPregnant=1, MilkLactating=4;
+    const int LikeChance=40, LikeMult=2, GuestConceiveChance=40;                // 愛孕客人出現機率(%)與打賞倍率、神秘客人來訪受孕機率(%)                                   // 每人每班鮮乳（乘牧場搾乳設施等級）
 
     // 擲骰（0～n-1）。獨立出來方便測試固定結果。
     public static Func<int,int> Roll=n=>(int)(Godot.GD.Randi()%(uint)n);
@@ -28,6 +29,7 @@ public static partial class RMZDistrict
             if(V(8221+w)!=Hosting+1||V(NoPill+w)==0||V(Preg+w)!=0)continue;
             if(Roll(100)>=ConceiveChance)continue;
             Set(Preg+w,1);Set(PregDays+w,PregnancyLength);
+            Set(Father+w,0);
             note+="\n"+Names[w]+"懷孕了。可以安排到牧場搾乳；繼續接待會加快產期。";
         }
         SyncPregnantCount();return note;
@@ -47,7 +49,7 @@ public static partial class RMZDistrict
         SyncAssignments();SyncPregnantCount();return note;
     }
 
-    static string Deliver(int w){Set(Preg+w,2);Set(PregDays+w,LactationLength);Set(Births+w,V(Births+w)+1);return "\n"+Names[w]+"生下了孩子，進入哺乳期。";}
+    static string Deliver(int w){Set(Father+w,0);Set(Preg+w,2);Set(PregDays+w,LactationLength);Set(Births+w,V(Births+w)+1);return "\n"+Names[w]+"生下了孩子，進入哺乳期。";}
 
     // 縮短孕期 n 天；降到 0 立即生產。回傳通知文字（沒生產就是空字串）。
     static string DropDays(int w,int n)
@@ -97,10 +99,35 @@ public static partial class RMZDistrict
         return n*Lv(Ranch);
     }
 
+    // 神秘客人的特殊接見：懷孕中且孩子不是他的 → 不能接見
+    static bool GuestBlocked(int w)=>V(Preg+w)==1&&V(Father+w)==0;
+
+    // 夜間接待本班收入。客人喜好不同：有人特別喜歡孕期的角色，出現時該角色收入 ×LikeMult。
+    static (int gold,int stamp,string note) HostIncome()
+    {
+        int gold=0,stamp=0,fans=0;int lv=Lv(Hosting);
+        for(int w=0;w<6;w++){
+            if(V(8201+w)==0||V(8221+w)!=Hosting+1)continue;
+            int g=HostGold*lv;
+            if(V(Preg+w)==1&&Roll(100)<LikeChance){g*=LikeMult;fans++;}
+            gold+=g;stamp+=HostStamp*lv;
+        }
+        return (gold,stamp,fans>0?"\n有客人特別喜歡孕期的角色，額外打賞（"+fans+" 位）。":"");
+    }
+
+    // 神秘客人來訪時，停用避孕的角色有機會受孕，孩子算是他的。
+    static string GuestConceive(int w)
+    {
+        if(V(NoPill+w)==0||V(Preg+w)!=0||Roll(100)>=GuestConceiveChance)return "";
+        Set(Preg+w,1);Set(PregDays+w,PregnancyLength);Set(Father+w,1);SyncPregnantCount();
+        return "\n"+Names[w]+"懷孕了，孩子是這位客人的。他之後可以繼續接見。";
+    }
+
     static string PhaseText(int w)
     {
         int ph=V(Preg+w);
         string s=ph==1?"懷孕中（剩 "+V(PregDays+w)+" 天）":ph==2?"哺乳中（剩 "+V(PregDays+w)+" 天）":"一般";
+        if(ph==1)s+=V(Father+w)==1?"｜孩子是神秘客人的":"｜（不接見特殊客人）";
         return s+(V(NoPill+w)>0?"｜已停用避孕":"｜避孕中");
     }
 

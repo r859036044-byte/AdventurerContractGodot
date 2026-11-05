@@ -64,7 +64,7 @@ public static partial class RMZDistrict
                 int n=V(Assign+i)*Yield[i]*Lv(i);
                 if(n>0){RMZParty.GainItem(2101+i,n);produced[i]+=n;}
             }
-            if(hosted>0){int lv=Lv(Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;if(night){guestNotice+=CountHostShift();breedNotice+=HostAccelerate();breedNotice+=TryConceive();}}
+            if(hosted>0){var inc=HostIncome();hostGold+=inc.gold;hostStamp+=inc.stamp;breedNotice+=inc.note;if(night){guestNotice+=CountHostShift();breedNotice+=HostAccelerate();breedNotice+=TryConceive();}}
             worked++;Set(Fatigue,Math.Min(100,V(Fatigue)+(night?25:20)+(hosted>0?HostFatigue:0)));
         }
         Set(Last,target);

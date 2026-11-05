@@ -132,7 +132,7 @@ public static partial class RMZDistrict
             int st=V(GuestState+w);
             if(st==1||st>=3)continue;   // 客人已在等／正在提買斷／已買斷
             int n=V(GuestShifts+w)+1;Set(GuestShifts+w,n);
-            if(n>=GuestNeed){Set(GuestState+w,1);note+="\n神秘客人（"+Guests[w].Name+"）登門找"+Names[w]+"，到「神秘客人」處接見。";}
+            if(n>=GuestNeed){Set(GuestState+w,1);note+="\n神秘客人（"+Guests[w].Name+"）登門找"+Names[w]+(GuestBlocked(w)?"，但她懷孕中，無法接見（孩子不是他的）。":"，到「神秘客人」處接見。");}
         }
         return note;
     }
@@ -148,6 +148,7 @@ public static partial class RMZDistrict
         if(V(GuestGone+who)>0)return Names[who]+"已經被買斷離開了。";
         if(V(8201+who)==0)return Names[who]+"還沒有簽約。";
         var g=Guests[who];int state=V(GuestState+who),visits=V(GuestVisits+who);
+        if((state==1||state==3)&&GuestBlocked(who))return Names[who]+"懷孕中，無法接見特殊客人。\n（除非孩子是他的；生產後才能接見。）";
         if(state==3){LoadPages(g.Visits[GuestMaxVisits-1]);Set(GuestOffer,1);return Names[who]+"｜"+g.Name+"仍在等你的答覆。";}
         if(state==1){
             int v=visits;LoadPages(g.Visits[v]);
@@ -158,7 +159,8 @@ public static partial class RMZDistrict
             if(g.Gold[v]>0){RMZParty.GainGold(g.Gold[v]);reward+="　"+g.Gold[v]+" G";}
             if(g.Stamp[v]>0){Set(738,V(738)+g.Stamp[v]);reward+="　隸章 +"+g.Stamp[v];}
             if(v==0&&who==3||v==0&&who==4){RMZParty.GainItem(2102,10);reward+="　"+Goods[1]+" ×10";}
-            return Names[who]+"｜"+g.Name+"（第 "+(v+1)+" 次）"+(reward==""?"":"\n首次接見獎勵："+reward.TrimStart('　'));
+            string extra=V(Preg+who)==1&&V(Father+who)==1?"\n（她懷的是這位客人的孩子，他特別高興。）":"";
+            return Names[who]+"｜"+g.Name+"（第 "+(v+1)+" 次）"+(reward==""?"":"\n首次接見獎勵："+reward.TrimStart('　'))+extra+GuestConceive(who);
         }
         if(visits>0){LoadPages(g.Visits[visits-1]);return Names[who]+"｜回想第 "+visits+" 次來訪。";}
         return "目前沒有客人指名"+Names[who]+"。\n需要讓她排夜間接待班（還差 "+Math.Max(0,GuestNeed-V(GuestShifts+who))+" 班）。";
@@ -169,6 +171,7 @@ public static partial class RMZDistrict
     {
         Set(GuestHas,0);Set(GuestOffer,0);
         if(who<0||who>=6||V(GuestState+who)!=3||V(8201+who)==0)return "現在沒有可以答覆的買斷提議。";
+        if(GuestBlocked(who))return Names[who]+"懷孕中，無法答覆這位客人。";
         var g=Guests[who];
         RMZParty.GainGold(g.Price);
         Set(8201+who,0);Set(8211+who,0);Set(8221+who,0);SyncAssignments();
