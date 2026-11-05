@@ -51,7 +51,7 @@ public static partial class RMZDistrict
         SyncAssignments();SyncPregnantCount();return note;
     }
 
-    static string Deliver(int w){Set(Father+w,0);Set(Preg+w,2);Set(PregDays+w,LactationLength);Set(Births+w,V(Births+w)+1);return "\n"+Names[w]+"生下了孩子，進入哺乳期。";}
+    static string Deliver(int w){AddSan(w,-BirthSanCost);Set(Father+w,0);Set(Preg+w,2);Set(PregDays+w,LactationLength);Set(Births+w,V(Births+w)+1);return "\n"+Names[w]+"生下了孩子，進入哺乳期。";}
 
     // 縮短孕期 n 天；降到 0 立即生產。回傳通知文字（沒生產就是空字串）。
     static string DropDays(int w,int n)
@@ -103,8 +103,8 @@ public static partial class RMZDistrict
         if(RMZParty.NumItems(Seed)<1)return "需要受孕藥才能答應配種請求。可以在牧場管理屋的「催產用品」製作。";
         RMZParty.GainItem(Seed,-1);
         Set(Preg+who,1);Set(PregDays+who,PregnancyLength);Set(Father+who,0);Set(Req+who,0);Set(Breeds+who,V(Breeds+who)+1);
-        RMZParty.GainGold(BreedGold);Set(738,V(738)+BreedStamp);SyncPregnantCount();
-        return Names[who]+"服下受孕藥，答應了客人的配種請求。\n獲得配種費 "+BreedGold+" G、隸章 +"+BreedStamp+"。她懷孕了。";
+        RMZParty.GainGold(BreedGold);Set(738,V(738)+BreedStamp);AddSan(who,-BreedReqSanCost);SyncPregnantCount();
+        return Names[who]+"服下受孕藥，答應了客人的配種請求。\n獲得配種費 "+BreedGold+" G、隸章 +"+BreedStamp+"，SAN -"+BreedReqSanCost+"。她懷孕了。";
     }
 
     static string RefuseBreed(int who)
@@ -146,7 +146,7 @@ public static partial class RMZDistrict
     }
 
     // 神秘客人的特殊接見：懷孕中且孩子不是他的 → 不能接見
-    static bool GuestBlocked(int w)=>V(Preg+w)==1&&V(Father+w)==0;
+    static bool GuestBlocked(int w)=>V(Preg+w)==1&&V(Father+w)!=1;
 
     // 夜間接待本班收入。客人喜好不同：有人特別喜歡孕期的角色，出現時該角色收入 ×LikeMult。
     static (int gold,int stamp,string note) HostIncome()
@@ -174,7 +174,7 @@ public static partial class RMZDistrict
         int ph=V(Preg+w);
         string s=ph==1?"懷孕中（剩 "+V(PregDays+w)+" 天）":ph==2?"哺乳中（剩 "+V(PregDays+w)+" 天）":"一般";
         if(RequestValid(w))s+="｜有配種請求";
-        if(ph==1)s+=V(Father+w)==1?"｜孩子是神秘客人的":"｜（不接見特殊客人）";
+        if(ph==1)s+=V(Father+w)==1?"｜孩子是神秘客人的":V(Father+w)==2?"｜孩子是主人的（不接見特殊客人）":"｜（不接見特殊客人）";
         return s+(V(NoPill+w)>0?"｜已停用避孕":"｜避孕中");
     }
 
