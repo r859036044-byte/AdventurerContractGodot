@@ -175,7 +175,7 @@ public static partial class RMZDistrict
         var g=Guests[who];
         RMZParty.GainGold(g.Price);
         Set(8201+who,0);Set(8211+who,0);Set(8221+who,0);SyncAssignments();
-        Set(GuestState+who,4);Set(GuestGone+who,1);Set(GuestEnding+who,1);
+        Set(GuestState+who,4);Set(GuestGone+who,1);Set(GuestEnding+who,1);Set(Req+who,0);
         LoadPages(g.Ending);
         int endings=0;for(int i=0;i<6;i++)endings+=V(GuestEnding+i);
         string tail=ContractCount==0?"\n（已沒有簽約角色，需要重新簽約才能再進入奴隸區。）":"";

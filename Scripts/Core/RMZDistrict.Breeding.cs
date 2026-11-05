@@ -8,11 +8,13 @@ namespace RMZ;
 // 全部用遊戲變數存檔：8300+序號＝階段(0一般／1懷孕中／2哺乳中)、8310+＝剩餘天數、8320+＝1表示停用避孕、8330+＝生產次數。
 public static partial class RMZDistrict
 {
-    const int Preg=8300, PregDays=8310, NoPill=8320, Births=8330, Father=8340, PregnantCount=750;   // Father：懷孕中 0＝一般客人／不明，1＝她的神秘客人
+    const int Preg=8300, PregDays=8310, NoPill=8320, Births=8330, Father=8340, Req=8350, Breeds=8360, PregnantCount=750;   // Father：懷孕中 0＝一般客人／不明，1＝她的神秘客人
     public const int PregnancyLength=6, LactationLength=10, ConceiveChance=25;   // 天、天、%
-    public const int Balm=2108, Pill=2109;                                      // 催產香膏、催產藥（道具編號）
+    public const int Balm=2108, Pill=2109, Seed=2110;                                      // 催產香膏、催產藥（道具編號）
     const int BalmDrop=2, PillDrop=4, HostAccel=1;                              // 使用／接待一班縮短的孕期天數
     const int BalmHerb=1, BalmStamp=5, PillHerb=3, PillStamp=10;                // 製作成本：乾燥藥材(2103)＋隸章
+    const int SeedHerb=3, SeedCrystal=1, SeedStamp=20;                          // 受孕藥成本：乾燥藥材＋夜輝魔晶(2105)＋隸章
+    const int RequestChance=20, BreedGold=800, BreedStamp=10;                   // 配種請求出現機率(%)、同意後的報酬
     const int MilkPregnant=1, MilkLactating=4;
     const int LikeChance=40, LikeMult=2, GuestConceiveChance=40;                // 愛孕客人出現機率(%)與打賞倍率、神秘客人來訪受孕機率(%)                                   // 每人每班鮮乳（乘牧場搾乳設施等級）
 
@@ -29,7 +31,7 @@ public static partial class RMZDistrict
             if(V(8221+w)!=Hosting+1||V(NoPill+w)==0||V(Preg+w)!=0)continue;
             if(Roll(100)>=ConceiveChance)continue;
             Set(Preg+w,1);Set(PregDays+w,PregnancyLength);
-            Set(Father+w,0);
+            Set(Father+w,0);Set(Req+w,0);
             note+="\n"+Names[w]+"懷孕了。可以安排到牧場搾乳；繼續接待會加快產期。";
         }
         SyncPregnantCount();return note;
@@ -70,10 +72,54 @@ public static partial class RMZDistrict
     static string Craft(int item)
     {
         if(!CanEnter)return EntryReason;
-        bool pill=item==Pill;int herb=pill?PillHerb:BalmHerb,stamp=pill?PillStamp:BalmStamp;string name=pill?"催產藥":"催產香膏";
-        if(RMZParty.NumItems(2103)<herb||V(738)<stamp)return "製作"+name+"需要 "+Goods[2]+" ×"+herb+" 和 "+stamp+" 隸章。";
-        RMZParty.GainItem(2103,-herb);Set(738,V(738)-stamp);RMZParty.GainItem(item,1);
-        return "製作完成："+name+" ×1（孕期 -"+(pill?PillDrop:BalmDrop)+" 天）。\n持有 "+RMZParty.NumItems(item)+" 份。";
+        bool seed=item==Seed,pill=item==Pill;
+        int herb=seed?SeedHerb:pill?PillHerb:BalmHerb,stamp=seed?SeedStamp:pill?PillStamp:BalmStamp,crystal=seed?SeedCrystal:0;
+        string name=seed?"受孕藥":pill?"催產藥":"催產香膏";
+        if(RMZParty.NumItems(2103)<herb||RMZParty.NumItems(2105)<crystal||V(738)<stamp)
+            return "製作"+name+"需要 "+Goods[2]+" ×"+herb+(crystal>0?"、"+Goods[4]+" ×"+crystal:"")+" 和 "+stamp+" 隸章。";
+        RMZParty.GainItem(2103,-herb);if(crystal>0)RMZParty.GainItem(2105,-crystal);Set(738,V(738)-stamp);RMZParty.GainItem(item,1);
+        return "製作完成："+name+" ×1（"+(seed?"服用後一定受孕":"孕期 -"+(pill?PillDrop:BalmDrop)+" 天")+"）。\n持有 "+RMZParty.NumItems(item)+" 份。";
+    }
+
+    // 配種請求：夜間接待時，沒懷孕、不在哺乳期的接待角色有機率收到客人的配種請求（每人同時最多一件，等你處理）。
+    static string RollBreedRequests()
+    {
+        string note="";
+        for(int w=0;w<6;w++){
+            if(V(8201+w)==0||V(8221+w)!=Hosting+1||V(Preg+w)!=0||V(Req+w)!=0)continue;
+            if(Roll(100)>=RequestChance)continue;
+            Set(Req+w,1);note+="\n有客人向"+Names[w]+"提出配種請求，到夜間接待管理處的「配種請求」處理。";
+        }
+        return note;
+    }
+
+    static bool RequestValid(int w)=>V(8201+w)>0&&V(Req+w)>0&&V(Preg+w)==0;
+
+    // 同意：消耗一份受孕藥，她一定受孕（無視避孕設定），客人付配種費。孩子的父親算一般客人。
+    static string AcceptBreed(int who)
+    {
+        if(who<0||who>=6||V(8201+who)==0)return "這位角色還沒有簽約。";
+        if(!RequestValid(who))return "目前沒有客人向"+Names[who]+"提出配種請求（或她已經懷孕／在哺乳期）。";
+        if(RMZParty.NumItems(Seed)<1)return "需要受孕藥才能答應配種請求。可以在牧場管理屋的「催產用品」製作。";
+        RMZParty.GainItem(Seed,-1);
+        Set(Preg+who,1);Set(PregDays+who,PregnancyLength);Set(Father+who,0);Set(Req+who,0);Set(Breeds+who,V(Breeds+who)+1);
+        RMZParty.GainGold(BreedGold);Set(738,V(738)+BreedStamp);SyncPregnantCount();
+        return Names[who]+"服下受孕藥，答應了客人的配種請求。\n獲得配種費 "+BreedGold+" G、隸章 +"+BreedStamp+"。她懷孕了。";
+    }
+
+    static string RefuseBreed(int who)
+    {
+        if(who<0||who>=6||V(8201+who)==0)return "這位角色還沒有簽約。";
+        if(!RequestValid(who))return "目前沒有客人向"+Names[who]+"提出配種請求。";
+        Set(Req+who,0);return "已婉拒向"+Names[who]+"提出的配種請求。";
+    }
+
+    static string BreedRequests()
+    {
+        string s="受孕藥 "+RMZParty.NumItems(Seed)+" 份｜配種費 "+BreedGold+" G＋"+BreedStamp+" 隸章";int n=0;
+        for(int w=0;w<6;w++)if(RequestValid(w)){s+="\n"+Names[w]+"：有客人提出配種請求";n++;}
+        if(n==0)s+="\n目前沒有待處理的配種請求。";
+        return s;
     }
 
     static string UseInducer(int who,int item)
@@ -119,7 +165,7 @@ public static partial class RMZDistrict
     static string GuestConceive(int w)
     {
         if(V(NoPill+w)==0||V(Preg+w)!=0||Roll(100)>=GuestConceiveChance)return "";
-        Set(Preg+w,1);Set(PregDays+w,PregnancyLength);Set(Father+w,1);SyncPregnantCount();
+        Set(Preg+w,1);Set(PregDays+w,PregnancyLength);Set(Father+w,1);Set(Req+w,0);SyncPregnantCount();
         return "\n"+Names[w]+"懷孕了，孩子是這位客人的。他之後可以繼續接見。";
     }
 
@@ -127,6 +173,7 @@ public static partial class RMZDistrict
     {
         int ph=V(Preg+w);
         string s=ph==1?"懷孕中（剩 "+V(PregDays+w)+" 天）":ph==2?"哺乳中（剩 "+V(PregDays+w)+" 天）":"一般";
+        if(RequestValid(w))s+="｜有配種請求";
         if(ph==1)s+=V(Father+w)==1?"｜孩子是神秘客人的":"｜（不接見特殊客人）";
         return s+(V(NoPill+w)>0?"｜已停用避孕":"｜避孕中");
     }

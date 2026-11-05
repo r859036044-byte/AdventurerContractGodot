@@ -64,7 +64,7 @@ public static partial class RMZDistrict
                 int n=V(Assign+i)*Yield[i]*Lv(i);
                 if(n>0){RMZParty.GainItem(2101+i,n);produced[i]+=n;}
             }
-            if(hosted>0){var inc=HostIncome();hostGold+=inc.gold;hostStamp+=inc.stamp;breedNotice+=inc.note;if(night){guestNotice+=CountHostShift();breedNotice+=HostAccelerate();breedNotice+=TryConceive();}}
+            if(hosted>0){var inc=HostIncome();hostGold+=inc.gold;hostStamp+=inc.stamp;breedNotice+=inc.note;if(night){guestNotice+=CountHostShift();breedNotice+=HostAccelerate();breedNotice+=TryConceive();breedNotice+=RollBreedRequests();}}
             worked++;Set(Fatigue,Math.Min(100,V(Fatigue)+(night?25:20)+(hosted>0?HostFatigue:0)));
         }
         Set(Last,target);
@@ -111,6 +111,10 @@ public static partial class RMZDistrict
                 if(RMZParty.NumItems(2106)<5)msg="需要 5 份牧場補給。";
                 else{RMZParty.GainItem(2106,-5);Set(738,V(738)+15);msg="交付牧場補給，獲得 15 隸章。";}
                 break;
+            case "craftSeed":msg=Craft(Seed);break;
+            case "breed":msg=AcceptBreed(person);break;
+            case "breedNo":msg=RefuseBreed(person);break;
+            case "breedList":msg=BreedRequests();break;
             case "craftBalm":msg=Craft(Balm);break;
             case "craftPill":msg=Craft(Pill);break;
             case "useBalm":msg=UseInducer(person,Balm);break;
