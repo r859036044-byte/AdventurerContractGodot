@@ -5,18 +5,22 @@ public static partial class RMZDistrict
 {
     const int Init=8100, Last=8101, Fatigue=8102, Level=8120, Assign=8130;
     public const int Message=8199;
-    static readonly string[] Jobs={"織布工房","礦料加工","藥草栽培","夜間巡守","魔晶提煉","夜間接待"};
-    static readonly string[] Goods={"工房細布","精煉鐵料","乾燥藥材","守備徽記","夜輝魔晶","接待收入"};
-    static readonly int[] Yield={4,3,4,2,2,0};
+    static readonly string[] Jobs={"織布工房","礦料加工","藥草栽培","夜間巡守","魔晶提煉","夜間接待","牧場搾乳"};
+    static readonly string[] Goods={"工房細布","精煉鐵料","乾燥藥材","守備徽記","夜輝魔晶","接待收入","鮮乳"};
+    static readonly int[] Yield={4,3,4,2,2,0,0};
     // 第 6 個工作站「夜間接待」只能排夜班，不產物品：每人每班直接入帳金錢與隸章（乘設施等級），疲勞額外增加。
-    const int Hosting=5, HostGold=80, HostStamp=3, HostFatigue=10;
+    const int Ranch=6, Hosting=5, HostGold=80, HostStamp=3, HostFatigue=10;
     // 角色順序：尤梨卡、露娜、克萊爾、雪瑤、雪霜、鈴音。雙子共用關係值，分別簽約。
     static readonly string[] Names={"尤梨卡","露娜","克萊爾","雪瑤","雪霜","鈴音"};
     static readonly int[] Heroines={1,2,3,4,4,5};
     public static int ContractCount { get { int n=0;for(int i=0;i<6;i++)if(V(8201+i)>0)n++;return n; } }
     public static bool CanEnter=>V(8140)>0&&ContractCount>0;
     public static string EntryReason=>"進入奴隸區需要：已購買住宅，並有至少一位簽約角色。\n"+(V(8140)>0?"住宅：已購買":"住宅：未購買（3000 G）")+"｜已簽約："+ContractCount+" 人\n可在公會引路人處購屋及辦理契約。";
-    static void SyncAssignments(){for(int j=0;j<6;j++){int count=0;for(int i=0;i<6;i++)if(V(8201+i)>0&&V((j>=3?8221:8211)+i)==j+1)count++;Set(Assign+j,count);}}
+    static bool Night(int j)=>j>=3&&j<=5;   // 夜班：巡守／魔晶／接待；其餘（含牧場搾乳）是日班
+    static readonly int[] DayJobs={0,1,2,6}, NightJobs={3,4,5};
+    // 舊存檔沒有後來新增設施的等級（讀到 0），一律當 1 級
+    static int Lv(int job)=>Math.Max(1,V(Level+job));
+    static void SyncAssignments(){for(int j=0;j<7;j++){int count=0;for(int i=0;i<6;i++)if(V(8201+i)>0&&V((Night(j)?8221:8211)+i)==j+1)count++;Set(Assign+j,count);}}
     static string Sign(int who){
         if(who<0||who>=6)return "請選擇簽約對象。";
         if(V(GuestGone+who)>0)return Names[who]+"已經被買斷離開，不會再回來了。";
@@ -28,7 +32,10 @@ public static partial class RMZDistrict
     static string AssignPerson(int job,int who){
         if(!CanEnter)return EntryReason;
         if(who<0||who>=6||V(8201+who)==0)return "這位角色還沒有簽約，不能安排工作。";
-        int key=(job>=3?8221:8211)+who;
+        if(job==Ranch&&V(8141)==0)return "需要先購買牧場，才能安排牧場搾乳。";
+        if(job==Ranch&&V(Preg+who)==0)return Names[who]+"目前沒有懷孕，也不在哺乳期，牧場搾乳只收懷孕中或哺乳中的角色。";
+        if(job==Hosting&&V(Preg+who)==1)return Names[who]+"懷孕中，不能排夜間接待。";
+        int key=(Night(job)?8221:8211)+who;
         if(V(key)==job+1)return Names[who]+"已安排這項工作，不會重複計算人數。";
         Set(key,job+1);SyncAssignments();return Names[who]+"已安排「"+Jobs[job]+"」。\n同班原有工作已替換，下次換班結算產物。";
     }
@@ -37,7 +44,7 @@ public static partial class RMZDistrict
     // 一天兩個結算段；傍晚開始夜班，翌日早晨結算夜班。
     static int Stamp(int day,int phase)=>Math.Max(0,day)*2+(phase>=2?1:0);
     static int Now=>Stamp(V(61),V(28));
-    static void Ensure(){if(V(Init)!=0)return;Set(Init,1);Set(Last,Now);for(int i=0;i<6;i++)Set(Level+i,1);}
+    static void Ensure(){if(V(Init)!=0)return;Set(Init,1);Set(Last,Now);for(int i=0;i<7;i++)Set(Level+i,1);}
     public static void Advance(int day,int phase)
     {
         if(V(Init)==0)return;
@@ -45,26 +52,28 @@ public static partial class RMZDistrict
         int target=Stamp(day,phase),last=V(Last);
         if(target<=last)return;
         if(!CanEnter){Set(Last,target);return;}
-        int[] produced=new int[6];int worked=0;int hostGold=0,hostStamp=0;string guestNotice="";
+        int[] produced=new int[7];int worked=0;int hostGold=0,hostStamp=0;string guestNotice="",breedNotice="";
         for(int s=last;s<target;s++){
-            bool night=(s%2)==1;if(!night&&V(8141)>0)RMZParty.GainItem(2106,3);int start=night?3:0,end=night?6:3;
-            int staff=0;for(int i=start;i<end;i++)staff+=V(Assign+i);
+            bool night=(s%2)==1;if(!night&&V(8141)>0)RMZParty.GainItem(2106,3);int[] jobs=night?NightJobs:DayJobs;
+            if(night)breedNotice+=TickPregnancy();   // 一天結束時推進孕期／哺乳期（休息班也照算）
+            int staff=0;foreach(int i in jobs)staff+=V(Assign+i);
             if(V(Fatigue)>=75||staff==0){Set(Fatigue,Math.Max(0,V(Fatigue)-35));continue;}
             int hosted=0;
-            for(int i=start;i<end;i++){
+            foreach(int i in jobs){
                 if(i==Hosting){hosted=V(Assign+i);continue;}
-                int n=V(Assign+i)*Yield[i]*V(Level+i);
+                if(i==Ranch){int m=RanchMilk();if(m>0){RMZParty.GainItem(2107,m);produced[i]+=m;}continue;}
+                int n=V(Assign+i)*Yield[i]*Lv(i);
                 if(n>0){RMZParty.GainItem(2101+i,n);produced[i]+=n;}
             }
-            if(hosted>0){int lv=V(Level+Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;if(night)guestNotice+=CountHostShift();}
+            if(hosted>0){int lv=Lv(Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;if(night){guestNotice+=CountHostShift();breedNotice+=TryConceive();}}
             worked++;Set(Fatigue,Math.Min(100,V(Fatigue)+(night?25:20)+(hosted>0?HostFatigue:0)));
         }
         Set(Last,target);
         if(hostGold>0){RMZParty.GainGold(hostGold);Set(738,V(738)+hostStamp);}
         string result="本次換班結算：";
-        for(int i=0;i<5;i++)if(produced[i]>0)result+="\n"+Goods[i]+" ×"+produced[i];
+        for(int i=0;i<7;i++)if(produced[i]>0)result+="\n"+Goods[i]+" ×"+produced[i];
         if(hostGold>0)result+="\n夜間接待收入 "+hostGold+" G、隸章 +"+hostStamp;
-        result+=guestNotice;
+        result+=guestNotice+breedNotice;
         if(worked==0)result+="\n休息恢復體力，沒有生產。";
         RMZGameState.SetVariableString(8188,result);
     }
@@ -73,10 +82,10 @@ public static partial class RMZDistrict
         Ensure();Advance(V(61),V(28));
         int person=job; string[] parts=(action??"status").Split(':');action=parts[0];
         if(parts.Length>1&&int.TryParse(parts[1],out int parsed))person=parsed;
-        job=Math.Clamp(job,0,5);
+        job=Math.Clamp(job,0,6);
         SyncAssignments();
         if(!CanEnter&&(action=="upgrade"||action=="deliver"||action.StartsWith("ranch")||action=="buyRanch")){RMZGameState.SetVariableString(Message,EntryReason);return;}
-        string msg="";int level=V(Level+job);
+        string msg="";int level=Lv(job);
         switch(action){
             case "sign":msg=Sign(person);break;
             case "assignPerson":msg=AssignPerson(job,person);break;
@@ -103,6 +112,8 @@ public static partial class RMZDistrict
                 if(RMZParty.NumItems(2106)<5)msg="需要 5 份牧場補給。";
                 else{RMZParty.GainItem(2106,-5);Set(738,V(738)+15);msg="交付牧場補給，獲得 15 隸章。";}
                 break;
+            case "toggle":msg=ToggleContraception(person);break;
+            case "ranchStatus":msg=BreedStatus();break;
             case "guest":msg=PlayGuest(person);break;
             case "buyout":msg=GuestBuyout(person);break;
             case "refuse":msg=GuestRefuse(person);break;
@@ -123,7 +134,7 @@ public static partial class RMZDistrict
             case "deliver":
                 if(job==Hosting)msg="夜間接待的收入每班直接入帳，沒有物品可交貨。";
                 else if(RMZParty.NumItems(2101+job)<5)msg="交貨需要 5 份"+Goods[job]+"。";
-                else{RMZParty.GainItem(2101+job,-5);int pay=job>=3?15:10;Set(738,V(738)+pay);msg="交付 5 份"+Goods[job]+"，獲得 "+pay+" 隸章。";}
+                else{RMZParty.GainItem(2101+job,-5);int pay=job==Ranch?20:job>=3?15:10;Set(738,V(738)+pay);msg="交付 5 份"+Goods[job]+"，獲得 "+pay+" 隸章。";}
                 break;
             default:
                 msg="已簽約 "+ContractCount+" 人｜疲勞 "+V(Fatigue)+"/100｜隸章 "+V(738)+"\n日／夜分班；疲勞達 75 時該班自動休息。";
