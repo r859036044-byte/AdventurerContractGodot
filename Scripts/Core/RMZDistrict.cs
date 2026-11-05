@@ -1,7 +1,7 @@
 using System;
 namespace RMZ;
 // 所有持久資料放入既有變數／物品存檔，不另建全域靜態進度。
-public static class RMZDistrict
+public static partial class RMZDistrict
 {
     const int Init=8100, Last=8101, Fatigue=8102, Level=8120, Assign=8130;
     public const int Message=8199;
@@ -44,7 +44,7 @@ public static class RMZDistrict
         int target=Stamp(day,phase),last=V(Last);
         if(target<=last)return;
         if(!CanEnter){Set(Last,target);return;}
-        int[] produced=new int[6];int worked=0;int hostGold=0,hostStamp=0;
+        int[] produced=new int[6];int worked=0;int hostGold=0,hostStamp=0;string guestNotice="";
         for(int s=last;s<target;s++){
             bool night=(s%2)==1;if(!night&&V(8141)>0)RMZParty.GainItem(2106,3);int start=night?3:0,end=night?6:3;
             int staff=0;for(int i=start;i<end;i++)staff+=V(Assign+i);
@@ -55,7 +55,7 @@ public static class RMZDistrict
                 int n=V(Assign+i)*Yield[i]*V(Level+i);
                 if(n>0){RMZParty.GainItem(2101+i,n);produced[i]+=n;}
             }
-            if(hosted>0){int lv=V(Level+Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;}
+            if(hosted>0){int lv=V(Level+Hosting);hostGold+=hosted*HostGold*lv;hostStamp+=hosted*HostStamp*lv;if(night)guestNotice+=CountHostShift();}
             worked++;Set(Fatigue,Math.Min(100,V(Fatigue)+(night?25:20)+(hosted>0?HostFatigue:0)));
         }
         Set(Last,target);
@@ -63,6 +63,7 @@ public static class RMZDistrict
         string result="本次換班結算：";
         for(int i=0;i<5;i++)if(produced[i]>0)result+="\n"+Goods[i]+" ×"+produced[i];
         if(hostGold>0)result+="\n夜間接待收入 "+hostGold+" G、隸章 +"+hostStamp;
+        result+=guestNotice;
         if(worked==0)result+="\n休息恢復體力，沒有生產。";
         RMZGameState.SetVariableString(8188,result);
     }
@@ -101,6 +102,7 @@ public static class RMZDistrict
                 if(RMZParty.NumItems(2106)<5)msg="需要 5 份牧場補給。";
                 else{RMZParty.GainItem(2106,-5);Set(738,V(738)+15);msg="交付牧場補給，獲得 15 隸章。";}
                 break;
+            case "guest":msg=PlayGuest(person);break;
             case "assign":msg="請選擇已簽約的角色安排工作。";break;
             case "restDay":for(int i=0;i<6;i++)Set(8211+i,0);SyncAssignments();msg="已取消所有角色的日班排程。";break;
             case "restNight":for(int i=0;i<6;i++)Set(8221+i,0);SyncAssignments();msg="已取消所有角色的夜班排程。";break;
