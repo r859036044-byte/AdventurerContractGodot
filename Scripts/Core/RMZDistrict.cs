@@ -19,6 +19,7 @@ public static partial class RMZDistrict
     static void SyncAssignments(){for(int j=0;j<6;j++){int count=0;for(int i=0;i<6;i++)if(V(8201+i)>0&&V((j>=3?8221:8211)+i)==j+1)count++;Set(Assign+j,count);}}
     static string Sign(int who){
         if(who<0||who>=6)return "請選擇簽約對象。";
+        if(V(GuestGone+who)>0)return Names[who]+"已經被買斷離開，不會再回來了。";
         if(V(8201+who)>0)return Names[who]+"已經簽約，不需重複辦理。";
         int h=Heroines[who];
         if(RMZGifts.Love(h)<100||RMZGifts.Fall(h)<100)return Names[who]+"尚未符合條件。\n好感 "+RMZGifts.Love(h)+"/100｜墮落 "+RMZGifts.Fall(h)+"/100\n兩項都達到 100 後才能簽訂奴隸契約。";
@@ -103,6 +104,8 @@ public static partial class RMZDistrict
                 else{RMZParty.GainItem(2106,-5);Set(738,V(738)+15);msg="交付牧場補給，獲得 15 隸章。";}
                 break;
             case "guest":msg=PlayGuest(person);break;
+            case "buyout":msg=GuestBuyout(person);break;
+            case "refuse":msg=GuestRefuse(person);break;
             case "assign":msg="請選擇已簽約的角色安排工作。";break;
             case "restDay":for(int i=0;i<6;i++)Set(8211+i,0);SyncAssignments();msg="已取消所有角色的日班排程。";break;
             case "restNight":for(int i=0;i<6;i++)Set(8221+i,0);SyncAssignments();msg="已取消所有角色的夜班排程。";break;
